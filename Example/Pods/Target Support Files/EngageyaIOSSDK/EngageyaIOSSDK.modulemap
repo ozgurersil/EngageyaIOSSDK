@@ -1,0 +1,6 @@
+framework module EngageyaIOSSDK {
+  umbrella header "EngageyaIOSSDK-umbrella.h"
+
+  export *
+  module * { export * }
+}

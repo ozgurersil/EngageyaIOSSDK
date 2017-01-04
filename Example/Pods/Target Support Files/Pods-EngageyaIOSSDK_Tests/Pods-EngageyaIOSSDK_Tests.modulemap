@@ -1,0 +1,6 @@
+framework module Pods_EngageyaIOSSDK_Tests {
+  umbrella header "Pods-EngageyaIOSSDK_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}

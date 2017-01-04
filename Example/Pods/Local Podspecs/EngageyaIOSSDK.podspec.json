@@ -1,0 +1,22 @@
+{
+  "name": "EngageyaIOSSDK",
+  "version": "0.1.0",
+  "summary": "A short description of EngageyaIOSSDK.",
+  "description": "TODO: Add long description of the pod here.",
+  "homepage": "https://github.com/<GITHUB_USERNAME>/EngageyaIOSSDK",
+  "license": {
+    "type": "MIT",
+    "file": "LICENSE"
+  },
+  "authors": {
+    "ozgur": "ozgur@engageya.com"
+  },
+  "source": {
+    "git": "https://github.com/<GITHUB_USERNAME>/EngageyaIOSSDK.git",
+    "tag": "0.1.0"
+  },
+  "platforms": {
+    "ios": "8.0"
+  },
+  "source_files": "EngageyaIOSSDK/Classes/**/*"
+}
