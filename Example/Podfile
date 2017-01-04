@@ -1,0 +1,11 @@
+use_frameworks!
+
+target 'EngageyaIOSSDK_Example' do
+  pod 'EngageyaIOSSDK', :path => '../'
+
+  target 'EngageyaIOSSDK_Tests' do
+    inherit! :search_paths
+
+    
+  end
+end
