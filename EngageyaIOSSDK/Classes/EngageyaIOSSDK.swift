@@ -28,7 +28,7 @@ struct Box {
 }
 
 
-public class EngageyaSDK : NSObject {
+public class EngageyaIOSSDK : NSObject {
     
     public func createWidget(idCollection:[String:String], creativeType:CreativeTypes , align:Align, compliation:@escaping (_ view:AnyObject )->()) {
         let url = JSONRequestHandler.createURL(collections: idCollection)
