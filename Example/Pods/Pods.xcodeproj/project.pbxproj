@@ -11,10 +11,12 @@
 		2BE6F6947B3FDD31633D79752C4D4E69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		4CB3C9DA1AF96A5E543910B13C20DA63 /* Pods-EngageyaIOSSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F32DC75580C56329FF34AA908F543FC0 /* Pods-EngageyaIOSSDK_Tests-dummy.m */; };
 		5E22A3CABC9D1AF21444F07788C3AAC5 /* Pods-EngageyaIOSSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		82DDBD23962C02D997AD7667472EAB53 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38B6A1C05158F3B72D5913E2DBAA6A74 /* ReplaceMe.swift */; };
 		8597C40D9AC0804EBA2674BA67BED91C /* Pods-EngageyaIOSSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26CA5B252E174E6772FE9E11900B0024 /* Pods-EngageyaIOSSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90037460516E70C9FBD5931DFDAB59F7 /* EngageyaIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */; };
 		AF261A006F16F45B71521D7F20314C87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		D36AE8081E1D890000FEB0F3 /* EngageyaSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36AE8071E1D890000FEB0F3 /* EngageyaSDK.swift */; };
+		D36AE80A1E1D892A00FEB0F3 /* EngageyaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36AE8091E1D892A00FEB0F3 /* EngageyaTableViewController.swift */; };
+		D36AE80C1E1D895500FEB0F3 /* JSONRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36AE80B1E1D895500FEB0F3 /* JSONRequestHandler.swift */; };
 		DA359E8F3D7079287DF9472D4FD24183 /* EngageyaIOSSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F00DD6F9A66CC8E0319162313B30F77 /* EngageyaIOSSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E73843672D102F59E6D112348A9DDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 /* End PBXBuildFile section */
@@ -35,7 +37,6 @@
 		10ECD0E7CA63C9A4F771284E85FE5365 /* EngageyaIOSSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EngageyaIOSSDK.xcconfig; sourceTree = "<group>"; };
 		26CA5B252E174E6772FE9E11900B0024 /* Pods-EngageyaIOSSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EngageyaIOSSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		30F0AEC12E40E8991285D39DBFBFB214 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		38B6A1C05158F3B72D5913E2DBAA6A74 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		577D014EC05A6D91066ADF2737ADB2D8 /* Pods-EngageyaIOSSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		6F00DD6F9A66CC8E0319162313B30F77 /* EngageyaIOSSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EngageyaIOSSDK-umbrella.h"; sourceTree = "<group>"; };
 		706FDCA96565143E087D558EC158DDC8 /* Pods-EngageyaIOSSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EngageyaIOSSDK_Example.modulemap"; sourceTree = "<group>"; };
@@ -57,6 +58,9 @@
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D1AF8D6FA667AE0384A98302F014079D /* Pods-EngageyaIOSSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Tests-resources.sh"; sourceTree = "<group>"; };
 		D367E91172DD425A2091214B66FDBD9E /* EngageyaIOSSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EngageyaIOSSDK.modulemap; sourceTree = "<group>"; };
+		D36AE8071E1D890000FEB0F3 /* EngageyaSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaSDK.swift; sourceTree = "<group>"; };
+		D36AE8091E1D892A00FEB0F3 /* EngageyaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaTableViewController.swift; sourceTree = "<group>"; };
+		D36AE80B1E1D895500FEB0F3 /* JSONRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRequestHandler.swift; sourceTree = "<group>"; };
 		D934E02B5B71CE7CBF250297C1E06281 /* EngageyaIOSSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EngageyaIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EngageyaIOSSDK-dummy.m"; sourceTree = "<group>"; };
 		F32DC75580C56329FF34AA908F543FC0 /* Pods-EngageyaIOSSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EngageyaIOSSDK_Tests-dummy.m"; sourceTree = "<group>"; };
@@ -166,7 +170,9 @@
 		97DE4413716D4AA40E2F08F807F3F746 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				38B6A1C05158F3B72D5913E2DBAA6A74 /* ReplaceMe.swift */,
+				D36AE8071E1D890000FEB0F3 /* EngageyaSDK.swift */,
+				D36AE8091E1D892A00FEB0F3 /* EngageyaTableViewController.swift */,
+				D36AE80B1E1D895500FEB0F3 /* JSONRequestHandler.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -353,8 +359,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D36AE80C1E1D895500FEB0F3 /* JSONRequestHandler.swift in Sources */,
 				90037460516E70C9FBD5931DFDAB59F7 /* EngageyaIOSSDK-dummy.m in Sources */,
-				82DDBD23962C02D997AD7667472EAB53 /* ReplaceMe.swift in Sources */,
+				D36AE80A1E1D892A00FEB0F3 /* EngageyaTableViewController.swift in Sources */,
+				D36AE8081E1D890000FEB0F3 /* EngageyaSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -382,6 +390,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10ECD0E7CA63C9A4F771284E85FE5365 /* EngageyaIOSSDK.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
@@ -522,6 +531,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10ECD0E7CA63C9A4F771284E85FE5365 /* EngageyaIOSSDK.xcconfig */;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
