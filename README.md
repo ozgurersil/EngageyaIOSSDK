@@ -53,7 +53,7 @@ Ready for getting widget data with method named `getWidgetData`
          }
 ```
 
-Structure of response EngageyaWidget & EngageyaBox
+Structure of response `EngageyaWidget` & `EngageyaBox`
 
 ```ruby
         EngageyaWidget {
