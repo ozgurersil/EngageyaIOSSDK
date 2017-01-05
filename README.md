@@ -11,6 +11,9 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 ## Requirements
 
+IOS8 or higher
+
+
 ## Installation
 
 EngageyaIOSSDK is available through [CocoaPods](http://cocoapods.org). To install
@@ -18,6 +21,50 @@ it, simply add the following line to your Podfile:
 
 ```ruby
 pod "EngageyaIOSSDK"
+```
+
+## Usage
+
+After pod install, simply add EngageyaIOSSDK with:
+```ruby
+       import EngageyaIOSSDK
+```
+
+Set your dictionary keys with the requirement values
+
+```ruby
+        let appId:[String:String] = [
+            "pub_id" : "xxxxxx",
+            "web_id" : "xxxxxx",
+            "wid_id" : "xxxxxx",
+            "url" : "http://xxx.com/xxx/938402-xxx-xx-xxxx"
+        ]
+```
+Define connection and make widgetData request
+
+```ruby
+         let engageya:EngageyaIOSSDK = EngageyaIOSSDK()
+         
+         engageya.getWidgetData(idCollection: appId) { (widget:EngageyaWidget) in
+                print("widgetTitle : \(widget.widgetTitle!)") // title of the widget
+                print("recs: \(widget.boxes!)") // Array of widget elements 
+         }
+```
+
+Structure of response EngageyaWidget & EngageyaBox
+```ruby
+
+        EngageyaWidget {
+            var boxes:[EngageyaBox]
+            var widgetTitle:String
+        }
+        
+        EngageyaBox {
+            var clickUrl:String
+            var displayName:String
+            var thumbnail_path:String
+            var title:String
+        }
 ```
 
 ## Author
