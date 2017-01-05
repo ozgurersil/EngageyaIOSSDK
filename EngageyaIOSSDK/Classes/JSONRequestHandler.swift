@@ -33,32 +33,57 @@ class JSONRequestHandler: NSObject {
         }
         
         let url = "\(base_path)pubid=\(pud_id)&webid=\(web_id)&wid=\(wid_id)&url=\(pageUrl)"
-        print(url)
         return url
     }
     
     
-    class func makeHTTPRequest(url:String, compliation:@escaping (_ status:Bool, _ data : NSArray)->()){
+   
+    class func getWidgetJSONResponse(url:String, compliation:@escaping (_ status:Bool, _ widget : EngageyaWidget)->()){
         let url = URL(string: url)
         URLSession.shared.dataTask(with:url!) { (data, response, error) in
+            let engWidget:EngageyaWidget?
             if error != nil {
                 print(error ?? "error with loading url : \(url)")
-                compliation(false,[])
+                compliation(false, EngageyaWidget(boxes: [], widgetTitle: "error"))
             } else {
                 do {
                     
                     let parsedData = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
+                    var engBoxes:[EngageyaBox] = []
                     if let recs = parsedData["recs"] as? NSArray{
-                        compliation(true,recs)
+                        for(index,value) in recs.enumerated(){
+                            guard let thumbnail_path:String = (value as AnyObject)["thumbnail_path"] as? String else{
+                                return
+                            }
+                            guard let title:String = (value as AnyObject)["title"] as? String else{
+                                return
+                            }
+                            
+                            guard let clickUrl:String = (value as AnyObject)["clickUrl"] as? String else{
+                                return
+                            }
+                            // displayName can be optional (brand title)
+                            var displayNameFinal = ""
+                            if let displayName:String = (value as AnyObject)["displayName"] as? String {
+                                displayNameFinal = displayName
+                            }
+                            let box:EngageyaBox = EngageyaBox(clickUrl: clickUrl, displayName: displayNameFinal, thumbnail_path: thumbnail_path, title: title)
+                            engBoxes.append(box)
+                        }
                     }
-                    /*let currentTemperatureF = currentConditions["temperature"] as! Double
-                     print(currentTemperatureF)*/
+                    if let widgetData = parsedData["widget"] as? [String:Any]{
+                        if let headerText:String = widgetData["headerText"] as? String {
+                            engWidget = EngageyaWidget(boxes: engBoxes, widgetTitle: headerText)
+                            compliation(true, engWidget!)
+                        }
+                    }
                 } catch let error as NSError {
                     print(error)
+                    compliation(false, EngageyaWidget(boxes: [], widgetTitle: "error"))
                 }
             }
-            
-            }.resume()
+        }.resume()
     }
+
     
 }

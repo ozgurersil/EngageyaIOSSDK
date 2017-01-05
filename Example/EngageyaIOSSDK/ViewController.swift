@@ -11,12 +11,22 @@ import EngageyaIOSSDK
 
 class ViewController: UIViewController {
     
-    let en:EngageyaIOSSDK = EngageyaIOSSDK()
+    let engageya:EngageyaIOSSDK = EngageyaIOSSDK()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        let appId:[String:String] = [
+            "pub_id" : "xxxxxx",
+            "web_id" : "xxxxxx",
+            "wid_id" : "xxxxxx",
+            "url" : "http://xxx.com/xxx/938402-xxx-xx-xxxx"
+        ]
         
+        engageya.getWidgetData(idCollection: appId) { (widget:EngageyaWidget) in
+                print("widgetTitle : \(widget.widgetTitle!)")
+                print("recs: \(widget.boxes!)")
+        }
         
     }
     
