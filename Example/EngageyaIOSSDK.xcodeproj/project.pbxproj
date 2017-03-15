@@ -73,7 +73,7 @@
 			isa = PBXGroup;
 			children = (
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
-				607FACD21AFB9204008FA782 /* Example for EngageyaIOSSDK */,
+				607FACD21AFB9204008FA782 /* Example for EngageyaIOSSDKSample */,
 				607FACE81AFB9204008FA782 /* Tests */,
 				607FACD11AFB9204008FA782 /* Products */,
 				EFC79A5C76FC9FB94A012100 /* Pods */,
@@ -90,7 +90,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		607FACD21AFB9204008FA782 /* Example for EngageyaIOSSDK */ = {
+		607FACD21AFB9204008FA782 /* Example for EngageyaIOSSDKSample */ = {
 			isa = PBXGroup;
 			children = (
 				607FACD51AFB9204008FA782 /* AppDelegate.swift */,
@@ -100,7 +100,7 @@
 				607FACDE1AFB9204008FA782 /* LaunchScreen.xib */,
 				607FACD31AFB9204008FA782 /* Supporting Files */,
 			);
-			name = "Example for EngageyaIOSSDK";
+			name = "Example for EngageyaIOSSDKSample";
 			path = EngageyaIOSSDK;
 			sourceTree = "<group>";
 		};
