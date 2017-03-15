@@ -13,9 +13,10 @@
 		5E22A3CABC9D1AF21444F07788C3AAC5 /* Pods-EngageyaIOSSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8597C40D9AC0804EBA2674BA67BED91C /* Pods-EngageyaIOSSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26CA5B252E174E6772FE9E11900B0024 /* Pods-EngageyaIOSSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90037460516E70C9FBD5931DFDAB59F7 /* EngageyaIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */; };
+		9B466C2B1E7966F100B16F53 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B466C2A1E7966F100B16F53 /* EventManager.swift */; };
 		AF261A006F16F45B71521D7F20314C87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
+		D334D17E1E4DB335007205A2 /* EngageyaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334D17D1E4DB335007205A2 /* EngageyaTableViewCell.swift */; };
 		D36AE8081E1D890000FEB0F3 /* EngageyaIOSSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36AE8071E1D890000FEB0F3 /* EngageyaIOSSDK.swift */; };
-		D36AE80A1E1D892A00FEB0F3 /* EngageyaTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36AE8091E1D892A00FEB0F3 /* EngageyaTableViewController.swift */; };
 		D36AE80C1E1D895500FEB0F3 /* JSONRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D36AE80B1E1D895500FEB0F3 /* JSONRequestHandler.swift */; };
 		DA359E8F3D7079287DF9472D4FD24183 /* EngageyaIOSSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F00DD6F9A66CC8E0319162313B30F77 /* EngageyaIOSSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E5E73843672D102F59E6D112348A9DDA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
@@ -50,6 +51,7 @@
 		980433BC9B2B0AA0AA67F13B7067618F /* Pods-EngageyaIOSSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EngageyaIOSSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EngageyaIOSSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		99DC4D2FE216C9F895130706C87F9611 /* Pods-EngageyaIOSSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Example-resources.sh"; sourceTree = "<group>"; };
+		9B466C2A1E7966F100B16F53 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		9D7F89BC3008D020766B5CE09D13878F /* Pods-EngageyaIOSSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EngageyaIOSSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B21FF78E5008D00916347C94D46B9B5D /* Pods-EngageyaIOSSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EngageyaIOSSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B65B5850FAC40AF357EBB41AF29B33D3 /* Pods-EngageyaIOSSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EngageyaIOSSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
@@ -57,9 +59,9 @@
 		C62668FE05E183E820449D673E9D68F2 /* Pods-EngageyaIOSSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EngageyaIOSSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		D1AF8D6FA667AE0384A98302F014079D /* Pods-EngageyaIOSSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Tests-resources.sh"; sourceTree = "<group>"; };
+		D334D17D1E4DB335007205A2 /* EngageyaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EngageyaTableViewCell.swift; path = ../../Example/EngageyaIOSSDK/EngageyaTableViewCell.swift; sourceTree = "<group>"; };
 		D367E91172DD425A2091214B66FDBD9E /* EngageyaIOSSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EngageyaIOSSDK.modulemap; sourceTree = "<group>"; };
 		D36AE8071E1D890000FEB0F3 /* EngageyaIOSSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaIOSSDK.swift; sourceTree = "<group>"; };
-		D36AE8091E1D892A00FEB0F3 /* EngageyaTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaTableViewController.swift; sourceTree = "<group>"; };
 		D36AE80B1E1D895500FEB0F3 /* JSONRequestHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONRequestHandler.swift; sourceTree = "<group>"; };
 		D934E02B5B71CE7CBF250297C1E06281 /* EngageyaIOSSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EngageyaIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EngageyaIOSSDK-dummy.m"; sourceTree = "<group>"; };
@@ -170,9 +172,10 @@
 		97DE4413716D4AA40E2F08F807F3F746 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				D334D17D1E4DB335007205A2 /* EngageyaTableViewCell.swift */,
 				D36AE8071E1D890000FEB0F3 /* EngageyaIOSSDK.swift */,
-				D36AE8091E1D892A00FEB0F3 /* EngageyaTableViewController.swift */,
 				D36AE80B1E1D895500FEB0F3 /* JSONRequestHandler.swift */,
+				9B466C2A1E7966F100B16F53 /* EventManager.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -359,9 +362,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B466C2B1E7966F100B16F53 /* EventManager.swift in Sources */,
 				D36AE80C1E1D895500FEB0F3 /* JSONRequestHandler.swift in Sources */,
 				90037460516E70C9FBD5931DFDAB59F7 /* EngageyaIOSSDK-dummy.m in Sources */,
-				D36AE80A1E1D892A00FEB0F3 /* EngageyaTableViewController.swift in Sources */,
+				D334D17E1E4DB335007205A2 /* EngageyaTableViewCell.swift in Sources */,
 				D36AE8081E1D890000FEB0F3 /* EngageyaIOSSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
