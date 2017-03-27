@@ -7,14 +7,14 @@
 //
 import Foundation
 
-class EventManager {
+public class EventManager {
     // using NSMutableArray as Swift arrays can't change size inside dictionaries (yet, probably)
     var listeners = Dictionary<String, NSMutableArray>();
     
     // Create a new event listener, not expecting information from the trigger
     // + eventName: Matching trigger eventNames will cause this listener to fire
     // + action: The block of code you want executed when the event triggers
-    func listenTo(eventName:String, action: @escaping (()->())) {
+   public func listenTo(eventName:String, action: @escaping (()->())) {
         let newListener = EventListenerAction(callback: action);
         addListener(eventName: eventName, newEventListener: newListener);
     }
@@ -22,12 +22,12 @@ class EventManager {
     // Create a new event listener, expecting information from the trigger
     // + eventName: Matching trigger eventNames will cause this listener to fire
     // + action: The block of code you want executed when the event triggers
-    func listenTo(eventName:String, action: @escaping ((Any?)->())) {
+    public func listenTo(eventName:String, action: @escaping ((Any?)->())) {
         let newListener = EventListenerAction(callback: action);
         addListener(eventName: eventName, newEventListener: newListener);
     }
     
-    internal func addListener(eventName:String, newEventListener:EventListenerAction) {
+    public func addListener(eventName:String, newEventListener:EventListenerAction) {
         if let listenerArray = self.listeners[eventName] {
             // action array exists for this event, add new action to it
             listenerArray.add(newEventListener);
@@ -40,7 +40,7 @@ class EventManager {
     
     // Removes all listeners by default, or specific listeners through paramters
     // + eventName: If an event name is passed, only listeners for that event will be removed
-    func removeListeners(eventNameToRemoveOrNil:String?) {
+    public func removeListeners(eventNameToRemoveOrNil:String?) {
         if let eventNameToRemove = eventNameToRemoveOrNil {
             // remove listeners for a specific event
             
@@ -58,7 +58,7 @@ class EventManager {
     // Triggers an event
     // + eventName: Matching listener eventNames will fire when this is called
     // + information: pass values to your listeners
-    func trigger(eventName:String, information:Any? = nil) {
+    public func trigger(eventName:String, information:Any? = nil) {
         if let actionObjects = self.listeners[eventName] {
             for actionObject in actionObjects {
                 if let actionToPerform = actionObject as? EventListenerAction {
@@ -75,7 +75,7 @@ class EventManager {
 }
 
 // Class to hold actions to live in NSMutableArray
-class EventListenerAction {
+public class EventListenerAction {
     let action:(() -> ())?;
     let actionExpectsInfo:((Any?) -> ())?;
     

@@ -15,13 +15,14 @@ class EngageyaTableViewCell: UITableViewCell {
     
     static var imageWidth = 80.0
     
+    static var imageHeight = 80.0
+    
     var titleLabelMutual:UILabel = {
         let descLabel = UILabel(frame: CGRect(x:0, y: 0, width: (Int(cellWidth - 140)) , height: Int(imageWidth)))
         descLabel.textAlignment = .left
         descLabel.lineBreakMode = .byWordWrapping
         descLabel.numberOfLines = 0
         descLabel.font = UIFont.systemFont(ofSize: 10)
-        descLabel.minimumScaleFactor = 2
         descLabel.adjustsFontSizeToFitWidth = true
         return descLabel
     }()
@@ -37,8 +38,8 @@ class EngageyaTableViewCell: UITableViewCell {
     }()
     
     var homeImageView:UIImageView = {
-        let homeImageView = UIImageView(frame: CGRect(x: 15 , y: 5 , width: imageWidth - 10, height: imageWidth - 10))
-        homeImageView.contentMode = UIViewContentMode.scaleAspectFill
+        let homeImageView = UIImageView(frame: CGRect(x: 10 , y: 0 , width: imageWidth, height: imageHeight))
+        homeImageView.contentMode = UIViewContentMode.scaleToFill
         return homeImageView
     }()
     

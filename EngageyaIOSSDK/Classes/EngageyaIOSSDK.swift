@@ -95,10 +95,10 @@ public enum Align : String {
 }
 
 public struct EngageyaBox {
-    var clickUrl:String!
-    var displayName:String!
-    var thumbnail_path:String!
-    var title:String!
+    public var clickUrl:String!
+    public var displayName:String!
+    public var thumbnail_path:String!
+    public var title:String!
 }
 
 public struct EngageyaWidget {
@@ -119,10 +119,15 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
     
     // Variables
     
+    public override init(){
+        
+    }
+
+    
     var tableView:UITableView?
     var items = [EngageyaBox]()
     var imageCache = Dictionary<String, UIImage>()
-    var eventManager:EventManager = EventManager()
+    public var eventManager:EventManager = EventManager()
     
     var titleLabel:UILabel = {
         let descLabel = UILabel(frame: CGRect(x:Int(5), y: 0, width: Int(UIScreen.main.bounds.width) , height: 40))
@@ -135,9 +140,6 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
     }()
     
     
-    public override init(){
-        
-    }
     
     
     func getEventManager()->EventManager{
@@ -157,13 +159,17 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
         }
     }
     
-    public func createListView(idCollection:[String:String], compliation:@escaping (_ widget:UIView)->()){
+    public func createListView(idCollection:[String:String], imageSize: (imageWidthAll:Int,imageHeightAll:Int) ,compliation:@escaping (_ widget:UIView)->()){
         let url = JSONRequestHandler.createURL(collections: idCollection)
         JSONRequestHandler.getWidgetJSONResponse(url: url) { (bool, widget) in
             if !bool{
                 print("error with JSON url - please check your id collection")
                 return
             }
+            
+            EngageyaTableViewCell.imageWidth = Double(imageSize.imageWidthAll)
+            
+            EngageyaTableViewCell.imageHeight = Double(imageSize.imageHeightAll)
             
             self.items = widget.boxes!
             
@@ -180,7 +186,6 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
             holderView.addSubview(self.tableView!)
 
             DispatchQueue.main.async {
-                print(widget.widgetTitle!)
                 self.titleLabel.text = widget.widgetTitle
                 compliation(holderView)
             }
@@ -197,11 +202,11 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
     
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(EngageyaTableViewCell.imageWidth) - 5
+        return CGFloat(EngageyaTableViewCell.imageHeight) + 5
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        self.eventManager.trigger(eventName: "tapped", information: items[indexPath.row].title)
+        self.eventManager.trigger(eventName: "tapped", information: items[indexPath.row])
     }
     
     
@@ -218,8 +223,9 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
                         let image = UIImage(data: data!)
                         self.imageCache[String(box.thumbnail_path)] = image
                         cell.homeImageView.image = image
-                        
-                        let titlePositionRect = CGRect(x: cell.homeImageView.frame.size.width + cell.homeImageView.layer.position.x - 15, y: 10, width:UIScreen.main.bounds.width - (cell.homeImageView.layer.position.x + cell.homeImageView.bounds.width) , height: 30)
+                        print(EngageyaTableViewCell.imageWidth)
+                        print(EngageyaTableViewCell.imageHeight)
+                        let titlePositionRect = CGRect(x: Int(EngageyaTableViewCell.imageWidth + 20) , y: 10, width:Int(UIScreen.main.bounds.width - (cell.homeImageView.layer.position.x + cell.homeImageView.bounds.width)) , height: 30)
                         cell.titleLabelMutual.frame = titlePositionRect
                     }
                 }
