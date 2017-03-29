@@ -17,18 +17,28 @@ class EngageyaTableViewCell: UITableViewCell {
     
     static var imageHeight = 80.0
     
+    static var imagePaddingLeft = 5
+    
+    static var imagePaddingTop = 5.0
+    
+    static var tilePadding = 10
+    
+    static var fontSize:Int?
+    
     var titleLabelMutual:UILabel = {
-        let descLabel = UILabel(frame: CGRect(x:0, y: 0, width: (Int(cellWidth - 140)) , height: Int(imageWidth)))
+        let padding = Int(imagePaddingLeft) + Int(imageWidth) + 10
+        let descLabel = UILabel(frame: CGRect(x:Int(imageWidth + 10), y: Int(imagePaddingTop) , width: Int(cellWidth) - Int(padding) , height: 70))
         descLabel.textAlignment = .left
         descLabel.lineBreakMode = .byWordWrapping
-        descLabel.numberOfLines = 0
-        descLabel.font = UIFont.systemFont(ofSize: 10)
+        descLabel.numberOfLines = 3
+        
         descLabel.adjustsFontSizeToFitWidth = true
         return descLabel
     }()
     
     var countLabelMutual:UILabel = {
-        let descLabel = UILabel(frame: CGRect(x:Int(imageWidth + 30) , y: Int(imageWidth - 30), width: Int(UIScreen.main.bounds.width  - 40), height: 20))
+        let padding = Int(imagePaddingLeft) + Int(imageWidth) + 10
+        let descLabel = UILabel(frame: CGRect(x:Int(imageWidth + 10) , y: 0 , width: Int(cellWidth) - Int(padding), height: 10))
         descLabel.textAlignment = .left
         descLabel.textColor = UIColor(hex: 0xcccccc)
         descLabel.font = UIFont.systemFont(ofSize: 10)
@@ -38,35 +48,21 @@ class EngageyaTableViewCell: UITableViewCell {
     }()
     
     var homeImageView:UIImageView = {
-        let homeImageView = UIImageView(frame: CGRect(x: 10 , y: 0 , width: imageWidth, height: imageHeight))
+        let homeImageView = UIImageView(frame: CGRect(x: Double(imagePaddingLeft) , y: imagePaddingTop , width: imageWidth, height: imageHeight))
         homeImageView.contentMode = UIViewContentMode.scaleToFill
         return homeImageView
     }()
     
     override init(style: UITableViewCellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        let rect = CGRect(x: 0.0, y: 0.0, width: UIScreen.main.bounds.width , height: 40)
+        
+        self.selectionStyle = .none
+        
+        let rect = CGRect(x: 0.0, y: 0.0, width: Double(UIScreen.main.bounds.width) , height: EngageyaTableViewCell.imageHeight+10)
         let holderView:UIView = UIView(frame: rect)
         
-        /*let widthConstraint = NSLayoutConstraint(item: self.titleLabelMutual , attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 100)
-        
-        let heightConstraint = NSLayoutConstraint(item: self.titleLabelMutual, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 100)
-
-        var constraints = NSLayoutConstraint.constraints(
-            withVisualFormat: "V:[superview]-(<=1)-[label]",
-            options: NSLayoutFormatOptions.alignAllCenterX,
-            metrics: nil,
-            views: ["superview":holderView, "label":self.titleLabelMutual])
-        
-        
-        
-        
-        holderView.addConstraints(constraints)*/
-        
         holderView.addSubview(self.titleLabelMutual)
-        
         holderView.addSubview(self.homeImageView)
-        
         holderView.addSubview(self.countLabelMutual)
         
         self.addSubview(holderView)

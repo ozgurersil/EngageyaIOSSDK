@@ -9,7 +9,7 @@ import UIKit
 import EngageyaIOSSDK
 
 
-class ViewController: UIViewController, UITableViewDelegate {
+class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate {
     
     let engageya:EngageyaIOSSDK = EngageyaIOSSDK()
     
@@ -18,42 +18,48 @@ class ViewController: UIViewController, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
        
-        let holder:UIView = UIView(frame: CGRect(x: 0, y: 40, width: self.view.frame.width, height: self.view.frame.height))
+        let holder:UIView = UIView(frame: CGRect(x: 0, y: 20, width: self.view.frame.width, height: self.view.frame.height))
         self.view.addSubview(holder)
         
-      /* let appId:[String:String] = [
-            "pub_id" : "162254",
-            "web_id" : "123480",
-            "wid_id" : "92608",
-            "url" : "http://www.haber7.com/siyaset/haber/2257926-bahceliden-turkese-nankorluk-sayarim"
-        ]*/
         
- 
-        
-        let appId:[String:String] = [
-            "pub_id" : "164473",
-            "web_id" : "127410",
-            "wid_id" : "92644",
-            "url" : "http://www.haberturk.com/spor/futbol/haber/938402-ultraslandan-tffye-cikarma"
+        let appId:[String:Any] = [
+            "pub_id" : "xxx",
+            "web_id" : "xxx",
+            "wid_id" : "xxx",
+            "url" : "http://www.xxx.com/spor/futbol/haber/938402-ultraslandan-tffye-cikarma",
+            "imageWidth": 70,
+            "imageHeight": 70,
+            "fontSize": 12,
+            "tilePadding": 5
         ]
         
-        self.engageya.createListView(idCollection: appId, imageSize: (120,120)) { (widget:UIView) in
+        self.engageya.createListView(idCollection: appId) { (widget:UIView) in
             holder.addSubview(widget)
-        }
-        
-        //self.engageya.createListView(idCollection: <#T##[String : String]#>, compliation: <#T##(UIView) -> ()#>)
-        
-        /*self.engageya.createListView(idCollection: appId) { (widget:UIView) in
-            holder.addSubview(widget)
-            
-            //let f:EventManager = self.engageya.getEventManager()
             self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
-        }*/
+        }
+      
     }
     
     func clickAction(information:Any?){
         if let box = information as? EngageyaBox {
-            print(box.clickUrl)
+            if let displayName = box.displayName {
+                print("this is an ad \(displayName)")
+                let webView = UIWebView(frame: UIScreen.main.bounds)
+                if #available(iOS 9.0, *) {
+                    webView.allowsLinkPreview = true
+                } else {
+                    // Fallback on earlier versions
+                }
+                webView.delegate = self
+                view.addSubview(webView)
+                let url = "https:\(box.clickUrl!)"
+                let encoded_url = URL(string: url)!
+                webView.loadRequest(URLRequest(url: encoded_url))
+    
+            }
+            else{
+                print("this is not an ad \(box.clickUrl)")
+            }
         }
     }
     

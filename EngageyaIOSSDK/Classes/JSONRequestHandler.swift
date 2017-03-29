@@ -9,31 +9,32 @@ import UIKit
 
 class JSONRequestHandler: NSObject {
     
-    class func createURL(collections:[String:String]) -> String{
-        let base_path:String = "https://premium.engageya.com/rec-api/getrecs.json?"
-        
-        guard let pud_id:String = collections["pub_id"]! as? String else {
+    class func createURL(collections:[String:Any]) -> String{
+       let base_path:String = "https://recs.engageya.com/rec-api/getrecs.json?"
+       var pubid = ""
+        var webid = ""
+        var widid = ""
+        var pageUrl = ""
+       if let pud_id:String = collections["pub_id"]! as? String {
             // print("pub_id not defined")
+            pubid = pud_id
+        }
+        
+        if let web_id:String = collections["web_id"]! as? String {
+            webid = web_id
             
         }
         
-        guard let web_id:String = collections["web_id"]! as? String else {
-            print("web_id not defined")
-            
+        if let wid_id:String = collections["wid_id"]! as? String  {
+            //print("wid_id not defined")
+            widid = wid_id
         }
         
-        guard let wid_id:String = collections["wid_id"]! as? String else {
-            print("wid_id not defined")
-            
+        if let page_Url:String = collections["url"]! as? String {
+            //print("pageUrl not defined")
+            pageUrl = page_Url
         }
-        
-        guard let pageUrl:String = collections["url"]! as? String else {
-            print("pageUrl not defined")
-            
-        }
-        
-        let url = "\(base_path)pubid=\(pud_id)&webid=\(web_id)&wid=\(wid_id)&url=\(pageUrl)"
-        return url
+        return "\(base_path)pubid=\(pubid)&webid=\(webid)&wid=\(widid)&url=\(pageUrl)"
     }
     
     
@@ -47,7 +48,6 @@ class JSONRequestHandler: NSObject {
                 compliation(false, EngageyaWidget(boxes: [], widgetTitle: "error"))
             } else {
                 do {
-                    
                     let parsedData = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
                     var engBoxes:[EngageyaBox] = []
                     if let recs = parsedData["recs"] as? NSArray{
@@ -58,12 +58,11 @@ class JSONRequestHandler: NSObject {
                             guard let title:String = (value as AnyObject)["title"] as? String else{
                                 return
                             }
-                            
                             guard let clickUrl:String = (value as AnyObject)["clickUrl"] as? String else{
                                 return
                             }
                             // displayName can be optional (brand title)
-                            var displayNameFinal = ""
+                            var displayNameFinal:String?
                             if let displayName:String = (value as AnyObject)["displayName"] as? String {
                                 displayNameFinal = displayName
                             }
