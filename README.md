@@ -85,9 +85,7 @@ TableView Usage
 Structure of response `widget` `(UIView)`
 
 
-Events
-
-Tapped:
+## Events
 
 ```ruby
        self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
