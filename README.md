@@ -87,6 +87,8 @@ Structure of response `widget` `(UIView)`
 
 ## Events
 
+### Tap
+
 ```ruby
        self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
 ```
