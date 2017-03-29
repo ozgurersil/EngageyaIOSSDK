@@ -27,9 +27,10 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
             "web_id" : "127410",
             "wid_id" : "92644",
             "url" : "http://www.haberturk.com/spor/futbol/haber/938402-ultraslandan-tffye-cikarma",
-            "imageWidth": 70,
+            "imageWidth": 120,
             "imageHeight": 70,
-            "fontSize": 12,             "tilePadding": 5
+            "fontSize": 12,
+            "tilePadding": 5
         ]
         
         self.engageya.createListView(idCollection: appId) { (widget:UIView) in

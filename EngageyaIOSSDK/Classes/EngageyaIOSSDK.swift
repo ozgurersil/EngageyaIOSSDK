@@ -112,24 +112,15 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
                 return
             }
             
-            /// optionals
-            if let imageWidth = idCollection["imageWidth"] as? Int{
-                EngageyaTableViewCell.imageWidth = Double(imageWidth)
-            }
-            if let imageHeight = idCollection["imageHeight"] as? Int {
-                EngageyaTableViewCell.imageHeight = Double(imageHeight)
-            }
+            // set optionals if exist
+            self.checkOptionals(idCollection: idCollection)
             
-            if let fontSize = idCollection["fontSize"] as? Int {
-                EngageyaTableViewCell.fontSize = fontSize
-            }
             
-            if let tilePadding = idCollection["tilePadding"] as? Int {
-                EngageyaTableViewCell.tilePadding = tilePadding
-            }
-            
+            // set data array
             self.items = widget.boxes!
             
+            
+            // create tableView and its holder
             let holderView:UIView = UIView(frame: UIScreen.main.bounds)
             let rect = CGRect(x: 0.0, y: 40.0, width: Double(UIScreen.main.bounds.width), height: Double(self.items.count) * EngageyaTableViewCell.imageHeight + Double(self.items.count) * Double(EngageyaTableViewCell.tilePadding))
             self.tableView = UITableView(frame: rect, style: .plain)
@@ -138,7 +129,6 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
             self.tableView?.delegate = self
             self.tableView?.dataSource = self
             
-            
             holderView.addSubview(self.titleLabel)
             holderView.addSubview(self.tableView!)
 
@@ -146,6 +136,24 @@ public class EngageyaIOSSDK : NSObject , UITableViewDelegate , UITableViewDataSo
                 self.titleLabel.text = widget.widgetTitle
                 compliation(holderView)
             }
+        }
+    }
+    
+    public func checkOptionals(idCollection:[String:Any]){
+        /// optionals
+        if let imageWidth = idCollection["imageWidth"] as? Int{
+            EngageyaTableViewCell.imageWidth = Double(imageWidth)
+        }
+        if let imageHeight = idCollection["imageHeight"] as? Int {
+            EngageyaTableViewCell.imageHeight = Double(imageHeight)
+        }
+        
+        if let fontSize = idCollection["fontSize"] as? Int {
+            EngageyaTableViewCell.fontSize = fontSize
+        }
+        
+        if let tilePadding = idCollection["tilePadding"] as? Int {
+            EngageyaTableViewCell.tilePadding = tilePadding
         }
     }
     
