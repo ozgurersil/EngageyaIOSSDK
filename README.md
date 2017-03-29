@@ -84,6 +84,7 @@ TableView Usage
 
 Structure of response `widget` `(UIView)`
 
+![UITableView](https://www.dropbox.com/s/9e0ms47qv7dce3z/tableview.png?dl=0)
 
 ## Events
 
