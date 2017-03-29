@@ -36,11 +36,15 @@ Define connection with EngageyaIOSSDK and set your dictionary keys with the desi
 ```ruby
         let engageya:EngageyaIOSSDK = EngageyaIOSSDK() 
 
-        let appId:[String:String] = [
-            "pub_id" : "xxxxxx",
-            "web_id" : "xxxxxx",
-            "wid_id" : "xxxxxx",
-            "url" : "http://xxx.com/xxx/938402-xxx-xx-xxxx"
+        let appId:[String:Any] = [
+            "pub_id" : "xxx", (required)
+            "web_id" : "xxx", (required)
+            "wid_id" : "xxx", (required)
+            "url" : "http://www.xxx.com/spor/futbol/haber/938402-ultraslandan-tffye-cikarma", (required)
+            "imageWidth": 70, (optional)
+            "imageHeight": 70, (optional)
+            "fontSize": 12, (optional)
+            "tilePadding": 5 (optional)
         ]
 ```
 
@@ -68,6 +72,53 @@ Structure of response `EngageyaWidget` & `EngageyaBox`
             var title:String
         }
 ```
+
+
+TableView Usage 
+
+``` self.engageya.createListView(idCollection: appId) { (widget:UIView) in
+            holder.addSubview(widget)
+        }
+```
+
+Structure of response `widget` `(UIView)`
+
+
+Events
+
+Tapped:
+
+```self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
+```
+
+``` func clickAction(information:Any?){
+        if let box = information as? EngageyaBox {
+            if let displayName = box.displayName {
+                print("this is an ad \(displayName)")
+                let webView = UIWebView(frame: UIScreen.main.bounds)
+                if #available(iOS 9.0, *) {
+                    webView.allowsLinkPreview = true
+                } else {
+                    // Fallback on earlier versions
+                }
+                webView.delegate = self
+                view.addSubview(webView)
+                let url = "https:\(box.clickUrl!)"
+                let encoded_url = URL(string: url)!
+                webView.loadRequest(URLRequest(url: encoded_url))
+    
+            }
+            else{
+                print("this is not an ad \(box.clickUrl)")
+            }
+        }
+    }
+```
+
+
+
+
+
 
 ## Author
 
