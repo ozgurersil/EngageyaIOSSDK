@@ -76,7 +76,8 @@ Structure of response `EngageyaWidget` & `EngageyaBox`
 
 TableView Usage 
 
-``` self.engageya.createListView(idCollection: appId) { (widget:UIView) in
+```ruby 
+        self.engageya.createListView(idCollection: appId) { (widget:UIView) in
             holder.addSubview(widget)
         }
 ```
@@ -88,10 +89,12 @@ Events
 
 Tapped:
 
-```self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
+```ruby
+       self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
 ```
 
-``` func clickAction(information:Any?){
+```ruby 
+      func clickAction(information:Any?){
         if let box = information as? EngageyaBox {
             if let displayName = box.displayName {
                 print("this is an ad \(displayName)")
