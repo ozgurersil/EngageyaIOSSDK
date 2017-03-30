@@ -10,6 +10,7 @@
 		0E367FDA82B245A8CFB5CBCA27D87838 /* Pods-EngageyaIOSSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 906103103C224D85D05F46E190122C4C /* Pods-EngageyaIOSSDK_Example-dummy.m */; };
 		2BE6F6947B3FDD31633D79752C4D4E69 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		2E0EB9511E8A64D9000FC002 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EB9501E8A64D9000FC002 /* Extensions.swift */; };
+		2E0EB9571E8BB09F000FC002 /* EngageyaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E0EB9561E8BB09F000FC002 /* EngageyaCollectionViewCell.swift */; };
 		4CB3C9DA1AF96A5E543910B13C20DA63 /* Pods-EngageyaIOSSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F32DC75580C56329FF34AA908F543FC0 /* Pods-EngageyaIOSSDK_Tests-dummy.m */; };
 		5E22A3CABC9D1AF21444F07788C3AAC5 /* Pods-EngageyaIOSSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8597C40D9AC0804EBA2674BA67BED91C /* Pods-EngageyaIOSSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26CA5B252E174E6772FE9E11900B0024 /* Pods-EngageyaIOSSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -39,6 +40,7 @@
 		10ECD0E7CA63C9A4F771284E85FE5365 /* EngageyaIOSSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EngageyaIOSSDK.xcconfig; sourceTree = "<group>"; };
 		26CA5B252E174E6772FE9E11900B0024 /* Pods-EngageyaIOSSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EngageyaIOSSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
 		2E0EB9501E8A64D9000FC002 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2E0EB9561E8BB09F000FC002 /* EngageyaCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaCollectionViewCell.swift; sourceTree = "<group>"; };
 		30F0AEC12E40E8991285D39DBFBFB214 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		577D014EC05A6D91066ADF2737ADB2D8 /* Pods-EngageyaIOSSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
 		6F00DD6F9A66CC8E0319162313B30F77 /* EngageyaIOSSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EngageyaIOSSDK-umbrella.h"; sourceTree = "<group>"; };
@@ -179,6 +181,7 @@
 				D36AE80B1E1D895500FEB0F3 /* JSONRequestHandler.swift */,
 				9B466C2A1E7966F100B16F53 /* EventManager.swift */,
 				2E0EB9501E8A64D9000FC002 /* Extensions.swift */,
+				2E0EB9561E8BB09F000FC002 /* EngageyaCollectionViewCell.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -367,6 +370,7 @@
 			files = (
 				9B466C2B1E7966F100B16F53 /* EventManager.swift in Sources */,
 				D36AE80C1E1D895500FEB0F3 /* JSONRequestHandler.swift in Sources */,
+				2E0EB9571E8BB09F000FC002 /* EngageyaCollectionViewCell.swift in Sources */,
 				90037460516E70C9FBD5931DFDAB59F7 /* EngageyaIOSSDK-dummy.m in Sources */,
 				2E0EB9511E8A64D9000FC002 /* Extensions.swift in Sources */,
 				D334D17E1E4DB335007205A2 /* EngageyaTableViewCell.swift in Sources */,

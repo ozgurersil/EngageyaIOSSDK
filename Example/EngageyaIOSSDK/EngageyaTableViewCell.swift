@@ -21,7 +21,7 @@ class EngageyaTableViewCell: UITableViewCell {
     
     static var imagePaddingTop = 5.0
     
-    static var tilePadding = 10
+    static var tilePadding = 5
     
     static var fontSize:Int?
     
