@@ -9,29 +9,6 @@ import Foundation
 import UIKit
 
 
-extension String {
-    init(htmlEncodedString: String) {
-        self.init()
-        guard let encodedData = htmlEncodedString.data(using: .utf8) else {
-            self = htmlEncodedString
-            return
-        }
-        
-        let attributedOptions: [String : Any] = [
-            NSDocumentTypeDocumentAttribute: NSHTMLTextDocumentType,
-            NSCharacterEncodingDocumentAttribute: String.Encoding.utf8.rawValue
-        ]
-        
-        do {
-            let attributedString = try NSAttributedString(data: encodedData, options: attributedOptions, documentAttributes: nil)
-            self = attributedString.string
-        } catch {
-            print("Error: \(error)")
-            self = htmlEncodedString
-        }
-    }
-}
-
 
 public enum CreativeTypes : String {
     case tableView  = "tableView"
@@ -58,7 +35,13 @@ public struct EngageyaWidget {
 
 func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void)) {
     URLSession.shared.dataTask(with: URL(string: url)!, completionHandler: { (data, response, error) in
-        completion(NSData(data: data!) as Data)
+        if let newData = data {
+            completion(NSData(data: newData) as Data)
+        }
+        else{
+            print("creative did not loaded")
+        }
+        
     }) .resume()
 }
 
@@ -134,15 +117,22 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
             
             var calculateHeight = 0
             
-            if (EngageyaCollectionViewCell.direction == .horizontal){
-                layout.itemSize = CGSize(width: (200) , height: CGFloat(EngageyaCollectionViewCell.tileHeight))
+            if (OptionalParams.direction == .horizontal){
+                layout.itemSize = CGSize(width: (200) , height: CGFloat(OptionalParams.tileHeight))
                 layout.scrollDirection = .horizontal
-                calculateHeight = EngageyaCollectionViewCell.tileHeight
+                calculateHeight = Int(OptionalParams.tileHeight)
             }
             else{
                
-                layout.itemSize = CGSize(width: (UIScreen.main.bounds.width/CGFloat(EngageyaCollectionViewCell.tileRowCount) - 10.0) , height: CGFloat(EngageyaCollectionViewCell.tileHeight))
-                calculateHeight = Int(Double(self.items.count / EngageyaCollectionViewCell.tileRowCount) * Double(EngageyaCollectionViewCell.tileHeight) + Double(self.items.count / EngageyaCollectionViewCell.tileRowCount) * Double(EngageyaCollectionViewCell.tilePadding))
+                layout.itemSize = CGSize(width: (UIScreen.main.bounds.width/CGFloat(OptionalParams.tileRowCount) - 10.0) , height: CGFloat(OptionalParams.tileHeight))
+                
+                if let heightDefined = OptionalParams.widgetHeight {
+                    calculateHeight = heightDefined
+                }
+                else{
+                    calculateHeight = Int(Double(self.items.count / OptionalParams.tileRowCount) * Double(OptionalParams.tileHeight) + Double(self.items.count / OptionalParams.tileRowCount))
+                }
+                    
             }
           
         
@@ -184,7 +174,11 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
             
             // create tableView and its holder
             let holderView:UIView = UIView(frame: UIScreen.main.bounds)
-            let rect = CGRect(x: 0.0, y: 40.0, width: Double(UIScreen.main.bounds.width), height: Double(self.items.count) * EngageyaTableViewCell.imageHeight + Double(self.items.count ) * Double(EngageyaTableViewCell.tilePadding))
+            var rect = CGRect(x: 0.0, y: 40.0, width: Double(OptionalParams.cellWidth), height: Double(self.items.count) * OptionalParams.tileHeight)
+            
+            if let widgetHeight = OptionalParams.widgetHeight {
+                rect = CGRect(x: 0.0, y: 40.0, width: Double(OptionalParams.cellWidth), height: Double(widgetHeight))
+            }
             self.tableView = UITableView(frame: rect, style: .plain)
             self.tableView?.register(EngageyaTableViewCell.self, forCellReuseIdentifier: "box")
             self.tableView?.separatorStyle = .none
@@ -204,61 +198,51 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
     public func checkOptionals(idCollection:[String:Any],type:CreativeTypes){
         /// optionals
         if let imageWidth = idCollection["imageWidth"] as? Int{
-            if type == .tableView {
-                EngageyaTableViewCell.imageWidth = Double(imageWidth)
-            }
-            else{
-                EngageyaCollectionViewCell.imageWidth = Double(imageWidth)
-            }
-            
+            OptionalParams.imageWidth = Double(imageWidth)
         }
         if let imageHeight = idCollection["imageHeight"] as? Int {
-            if type == .tableView {
-                EngageyaTableViewCell.imageHeight = Double(imageHeight)
-            }
-            else{
-                EngageyaCollectionViewCell.imageHeight = Double(imageHeight)
-            }
+            OptionalParams.imageHeight = Double(imageHeight)
         }
         
         if let fontSize = idCollection["fontSize"] as? Int {
-            if type == .tableView {
-                EngageyaTableViewCell.fontSize = fontSize
-            }
-            else{
-                EngageyaCollectionViewCell.fontSize = fontSize
-            }
-            
+            OptionalParams.fontSize = fontSize
         }
-        
-        if let tilePadding = idCollection["tilePadding"] as? Int {
-            if type == .tableView {
-                EngageyaTableViewCell.tilePadding = tilePadding
-            }
-            else{
-                EngageyaCollectionViewCell.tilePadding = tilePadding
-            }
-            
+
+        if let fontFamily = idCollection["fontFamily"] as? UIFont {
+            OptionalParams.fontFamily = fontFamily
         }
+
         
         if let tileRowCount = idCollection["tileRowCount"] as? Int{
             if type == .tableView {
                // EngageyaTableViewCell.tilePadding = tilePadding
             }
             else{
-                EngageyaCollectionViewCell.tileRowCount = tileRowCount
+                OptionalParams.tileRowCount = tileRowCount
             }
         }
         
+        if let widgetHeight = idCollection["widgetHeight"] as? Int{
+            OptionalParams.widgetHeight = Int(widgetHeight)
+            print("widget height defined")
+        }
+      
+        
         if let tileHeight = idCollection["tileHeight"] as? Int{
-            
-            if type == .tableView {
-                // EngageyaTableViewCell.tilePadding = tilePadding
-            }
-            else{
-                EngageyaCollectionViewCell.tileHeight = tileHeight
-             
-            }
+            OptionalParams.tileHeight = Double(tileHeight)
+        }
+
+        if let titlePaddingLeft = idCollection["titlePaddingLeft"] as? Int{
+            OptionalParams.titlePaddingLeft = Double(titlePaddingLeft)
+        }
+
+        if let brandPaddingLeft = idCollection["brandPaddingLeft"] as? Int{
+            OptionalParams.brandPaddingLeft = Double(brandPaddingLeft)
+        }
+
+        
+        if let imagePaddingLeft = idCollection["imagePaddingLeft"] as? Int{
+            OptionalParams.imagePaddingLeft = Double(imagePaddingLeft)
         }
 
         if let direction = idCollection["direction"] as? String{
@@ -267,16 +251,14 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
             }
             else{
                 if direction == "V" {
-                    EngageyaCollectionViewCell.direction = .vertical
+                    OptionalParams.direction = .vertical
                 }
                 else{
-                    EngageyaCollectionViewCell.tileRowCount = self.items.count
-                    EngageyaCollectionViewCell.direction = .horizontal
+                    OptionalParams.tileRowCount = self.items.count
+                    OptionalParams.direction = .horizontal
                 }
             }
         }
-
-        
     }
     
     // Detect orientation changes
@@ -300,6 +282,7 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
         }
         flowLayout.invalidateLayout()*/
     }
+    
         
     // CollectionView Overrides
         
@@ -320,16 +303,25 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
                 
                 if let displayName = tile.displayName {
                     adName = displayName
-                    cell.countLabelMutual?.text = String(htmlEncodedString:adName!)
+                    cell.advertiserNameLabel?.text = String(htmlEncodedString:adName!)
                 }
                 
-                
-                if let fontSize = EngageyaCollectionViewCell.fontSize {
-                    cell.titleLabelMutual?.font = UIFont.systemFont(ofSize: CGFloat(fontSize))
+                if let fontFamily = OptionalParams.fontFamily {
+                    if let fontSize = OptionalParams.fontSize {
+                        cell.titleLabelMutual?.font = UIFont(name: fontFamily.fontName, size: CGFloat(fontSize))
+                    }
+                    else{
+                    cell.titleLabelMutual?.font = UIFont(name: fontFamily.fontName, size: 12)
+                    }
+                    cell.advertiserNameLabel?.font = UIFont(name: fontFamily.fontName, size: CGFloat(10))
                 }
+                else{
+                    cell.titleLabelMutual?.font = UIFont.systemFont(ofSize: 12)
+                }
+                
                 cell.titleLabelMutual?.sizeToFit()
-                cell.titleLabelMutual?.frame.origin.y = CGFloat(EngageyaCollectionViewCell.imageHeight) + CGFloat(10)
-                cell.countLabelMutual?.frame.origin.y = (cell.titleLabelMutual?.frame.height)! + 8 + CGFloat(EngageyaCollectionViewCell.imageHeight)
+                cell.titleLabelMutual?.frame.origin.y = CGFloat(OptionalParams.imageHeight) + CGFloat(10)
+                cell.advertiserNameLabel?.frame.origin.y = (cell.titleLabelMutual?.frame.height)! + 8 + CGFloat(OptionalParams.imageHeight)
                 
                 getDataFromUrl(imageURL) { data in
                     DispatchQueue.main.async {
@@ -362,7 +354,7 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
     
     
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return CGFloat(EngageyaTableViewCell.imageHeight) + CGFloat(EngageyaTableViewCell.tilePadding)
+        return CGFloat(OptionalParams.tileHeight)
     }
     
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -384,22 +376,33 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
                         cell.titleLabelMutual.text = String(htmlEncodedString: box.title)
                         
                         if let displayName = box.displayName {
-                           cell.countLabelMutual.text = String(htmlEncodedString:displayName)
+                           cell.titleLabelMutual.text = String(htmlEncodedString:displayName)
                             
                         }
-                        if let fontSize = EngageyaTableViewCell.fontSize {
-                            cell.titleLabelMutual.font = UIFont.systemFont(ofSize: CGFloat(fontSize))
+                        
+                        if let fontFamily = OptionalParams.fontFamily {
+                            if let fontSize = OptionalParams.fontSize {
+                                cell.titleLabelMutual.font = UIFont(name: fontFamily.fontName, size: CGFloat(fontSize))
+                            }
+                            else{
+                                cell.titleLabelMutual.font = UIFont(name: fontFamily.fontName, size: 12)
+                            }
+                            cell.advertiserNameLabel.font = UIFont(name: fontFamily.fontName, size: CGFloat(10))
+                            
+                        }
+                        else{
+                            cell.titleLabelMutual.font = UIFont.systemFont(ofSize: 12)
                         }
                         
+                        
+                        
                         cell.titleLabelMutual.sizeToFit()
-                        cell.countLabelMutual.frame.origin.y = cell.titleLabelMutual.frame.height + 10
+                        cell.advertiserNameLabel.frame.origin.y = cell.titleLabelMutual.frame.height + 10
                     }
                 }
             }
             return cell
         }
     }
-
-    
     
 }

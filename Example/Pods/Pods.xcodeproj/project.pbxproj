@@ -15,6 +15,7 @@
 		5E22A3CABC9D1AF21444F07788C3AAC5 /* Pods-EngageyaIOSSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8597C40D9AC0804EBA2674BA67BED91C /* Pods-EngageyaIOSSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26CA5B252E174E6772FE9E11900B0024 /* Pods-EngageyaIOSSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		90037460516E70C9FBD5931DFDAB59F7 /* EngageyaIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */; };
+		9B1EA2A71E9668DA00B94FB4 /* OptionalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B1EA2A61E9668DA00B94FB4 /* OptionalParams.swift */; };
 		9B466C2B1E7966F100B16F53 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B466C2A1E7966F100B16F53 /* EventManager.swift */; };
 		AF261A006F16F45B71521D7F20314C87 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CBB3DE36805AF21409EC968A9691732F /* Foundation.framework */; };
 		D334D17E1E4DB335007205A2 /* EngageyaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D334D17D1E4DB335007205A2 /* EngageyaTableViewCell.swift */; };
@@ -55,6 +56,7 @@
 		980433BC9B2B0AA0AA67F13B7067618F /* Pods-EngageyaIOSSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EngageyaIOSSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EngageyaIOSSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		99DC4D2FE216C9F895130706C87F9611 /* Pods-EngageyaIOSSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Example-resources.sh"; sourceTree = "<group>"; };
+		9B1EA2A61E9668DA00B94FB4 /* OptionalParams.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalParams.swift; sourceTree = "<group>"; };
 		9B466C2A1E7966F100B16F53 /* EventManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		9D7F89BC3008D020766B5CE09D13878F /* Pods-EngageyaIOSSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EngageyaIOSSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		B21FF78E5008D00916347C94D46B9B5D /* Pods-EngageyaIOSSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EngageyaIOSSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				9B466C2A1E7966F100B16F53 /* EventManager.swift */,
 				2E0EB9501E8A64D9000FC002 /* Extensions.swift */,
 				2E0EB9561E8BB09F000FC002 /* EngageyaCollectionViewCell.swift */,
+				9B1EA2A61E9668DA00B94FB4 /* OptionalParams.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -369,6 +372,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9B466C2B1E7966F100B16F53 /* EventManager.swift in Sources */,
+				9B1EA2A71E9668DA00B94FB4 /* OptionalParams.swift in Sources */,
 				D36AE80C1E1D895500FEB0F3 /* JSONRequestHandler.swift in Sources */,
 				2E0EB9571E8BB09F000FC002 /* EngageyaCollectionViewCell.swift in Sources */,
 				90037460516E70C9FBD5931DFDAB59F7 /* EngageyaIOSSDK-dummy.m in Sources */,

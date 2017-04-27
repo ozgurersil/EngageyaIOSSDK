@@ -23,34 +23,20 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
         self.view.addSubview(holder)
         
         let appId:[String:Any] = [
-            "pub_id" : "164473",
-            "web_id" : "127410",
-            "wid_id" : "92644",
-            "url" : "http://www.haberturk.com/spor/futbol/haber/938402-ultraslandan-tffye-cikarma",
+            "pub_id" : "XXXX",
+            "web_id" : "XXXXX",
+            "wid_id" : "XXXXX",
+            "url" : "http://XXX/XXX/XXXX",
             "imageWidth": 135,
             "imageHeight": 70,
             "fontSize": 12,
-            "tilePadding": 5,
             "tileRowCount": 2,
-            "tileHeight":140,
-            "direction": "H"
+            "tileHeight":160,
+            "direction": "V",
+            "imagePaddingLeft" : 5
         ]
         
-        /*let appId:[String:Any] = [
-         "pub_id" : "158041",
-         "web_id" : "116302",
-         "wid_id" : "90501",
-         "url" : "http://www.ntv.com.tr/ekonomi/bookingin-turkiye-faaliyetleri-durduruldu,2FQkwmZf5kecnYXAsRQ9Hw",
-         "imageWidth": 135,
-         "imageHeight": 70,
-         "fontSize": 12,
-         "tileRowCount": 4,
-         "tilePadding": 0
-         ]*/
-        
-        
-        
-     /*   self.engageya.createListView(idCollection: appId) { (widget:UIView) in
+        /*self.engageya.createListView(idCollection: appId) { (widget:UIView) in
             holder.addSubview(widget)
             self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
         }*/
@@ -98,9 +84,6 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
             print("dismissed")
         })
     }
-    
-    
-       
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

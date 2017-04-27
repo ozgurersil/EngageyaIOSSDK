@@ -22,7 +22,6 @@ class JSONRequestHandler: NSObject {
         
         if let web_id:String = collections["web_id"]! as? String {
             webid = web_id
-            
         }
         
         if let wid_id:String = collections["wid_id"]! as? String  {
@@ -34,6 +33,7 @@ class JSONRequestHandler: NSObject {
             //print("pageUrl not defined")
             pageUrl = page_Url
         }
+        print("\(base_path)pubid=\(pubid)&webid=\(webid)&wid=\(widid)&url=\(pageUrl)")
         return "\(base_path)pubid=\(pubid)&webid=\(webid)&wid=\(widid)&url=\(pageUrl)"
     }
     
