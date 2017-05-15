@@ -23,10 +23,10 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
         self.view.addSubview(holder)
         
         let appId:[String:Any] = [
-            "pub_id" : "175793",
-            "web_id" : "121470",
-            "wid_id" : "107297",
-            "url" : "http://www.tgrthaber.com.tr/gundem/kopruye-patlayici-doseyen-terorist-kendi-tuzagina-dustu-178445",
+            "pub_id" : "xx",
+            "web_id" : "xx",
+            "wid_id" : "x",
+            "url" : "xx",
             
         ]
         

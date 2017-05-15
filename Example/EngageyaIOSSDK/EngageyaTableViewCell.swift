@@ -31,6 +31,7 @@ class EngageyaTableViewCell: UITableViewCell {
         return descLabel
     }()
     
+    
     var homeImageView:UIImageView = {
         let homeImageView = UIImageView(frame: CGRect(x: Double(OptionalParams.imagePaddingLeft) , y: OptionalParams.imagePaddingTop , width: OptionalParams.imageWidth, height: OptionalParams.imageHeight))
         homeImageView.contentMode = UIViewContentMode.scaleToFill
