@@ -23,28 +23,25 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
         self.view.addSubview(holder)
         
         let appId:[String:Any] = [
-            "pub_id" : "XXXX",
-            "web_id" : "XXXXX",
-            "wid_id" : "XXXXX",
-            "url" : "http://XXX/XXX/XXXX",
-            "imageWidth": 135,
-            "imageHeight": 70,
-            "fontSize": 12,
-            "tileRowCount": 2,
-            "tileHeight":160,
-            "direction": "V",
-            "imagePaddingLeft" : 5
+            "pub_id" : "175793",
+            "web_id" : "121470",
+            "wid_id" : "107297",
+            "url" : "http://www.tgrthaber.com.tr/gundem/kopruye-patlayici-doseyen-terorist-kendi-tuzagina-dustu-178445",
+            
         ]
         
-        /*self.engageya.createListView(idCollection: appId) { (widget:UIView) in
-            holder.addSubview(widget)
-            self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
-        }*/
         
-        self.engageya.createCollectionView(idCollection: appId) { (widget:UIView) in
+        
+        
+        self.engageya.createListView(idCollection: appId) { (widget:UIView) in
             holder.addSubview(widget)
             self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
         }
+        
+       /* self.engageya.createCollectionView(idCollection: appId) { (widget:UIView) in
+            holder.addSubview(widget)
+            self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
+        }*/
       
     }
     
