@@ -23,25 +23,29 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
         self.view.addSubview(holder)
         
         let appId:[String:Any] = [
-            "pub_id" : "xx",
-            "web_id" : "xx",
-            "wid_id" : "x",
-            "url" : "xx",
-            
+            "pub_id" : "xxx",
+            "web_id" : "xxx",
+            "wid_id" : "xxx",
+            "url" : "http://xxx/xxx/",
+            "titlePaddingLeft":5,
+            "imageWidth": 100,
+            "imageHeight": 75,
+            "tileHeight":80,
+            "fontFamily":UIFont.systemFont(ofSize: 12),
+            "fontSize": 15
         ]
-        
-        
-        
         
         self.engageya.createListView(idCollection: appId) { (widget:UIView) in
             holder.addSubview(widget)
             self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
         }
         
-       /* self.engageya.createCollectionView(idCollection: appId) { (widget:UIView) in
-            holder.addSubview(widget)
-            self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
-        }*/
+        /*
+         self.engageya.createCollectionView(idCollection: appId) { (widget:UIView) in
+         holder.addSubview(widget)
+         self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
+        }
+         */
       
     }
     

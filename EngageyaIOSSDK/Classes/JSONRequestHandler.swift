@@ -13,7 +13,7 @@ class JSONRequestHandler: NSObject {
        let base_path:String = "https://recs.engageya.com/rec-api/getrecs.json?"
        var pubid = ""
         var webid = ""
-        var widid = ""
+       var widid = ""
         var pageUrl = ""
        if let pud_id:String = collections["pub_id"]! as? String {
             // print("pub_id not defined")
@@ -33,8 +33,9 @@ class JSONRequestHandler: NSObject {
             //print("pageUrl not defined")
             pageUrl = page_Url
         }
-        print("\(base_path)pubid=\(pubid)&webid=\(webid)&wid=\(widid)&url=\(pageUrl)")
-        return "\(base_path)pubid=\(pubid)&webid=\(webid)&wid=\(widid)&url=\(pageUrl)"
+        let url = ("\(base_path)pubid=\(pubid)&webid=\(webid)&wid=\(widid)&url=\(pageUrl)")
+        print(url)
+        return url
     }
     
     

@@ -184,6 +184,7 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
             self.tableView?.separatorStyle = .none
             self.tableView?.delegate = self
             self.tableView?.dataSource = self
+            self.tableView?.alwaysBounceVertical = false
             
             holderView.addSubview(self.titleLabel)
             holderView.addSubview(self.tableView!)
@@ -374,9 +375,9 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
                         self.imageCache[String(box.thumbnail_path)] = image
                         cell.homeImageView.image = image
                         cell.titleLabelMutual.text = String(htmlEncodedString: box.title)
-                        
+                        cell.advertiserNameLabel.text = "Konut İnşaat"
                         if let displayName = box.displayName {
-                           cell.titleLabelMutual.text = String(htmlEncodedString:displayName)
+                           cell.advertiserNameLabel.text = String(htmlEncodedString:displayName)
                             
                         }
                         
@@ -385,7 +386,7 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
                                 cell.titleLabelMutual.font = UIFont(name: fontFamily.fontName, size: CGFloat(fontSize))
                             }
                             else{
-                                cell.titleLabelMutual.font = UIFont(name: fontFamily.fontName, size: 12)
+                                cell.titleLabelMutual.font = UIFont(name: fontFamily.fontName, size: 18)
                             }
                             cell.advertiserNameLabel.font = UIFont(name: fontFamily.fontName, size: CGFloat(10))
                             
@@ -397,7 +398,8 @@ func getDataFromUrl(_ url:String, completion: @escaping ((_ data: Data?) -> Void
                         
                         
                         cell.titleLabelMutual.sizeToFit()
-                        cell.advertiserNameLabel.frame.origin.y = cell.titleLabelMutual.frame.height + 10
+                        cell.advertiserNameLabel.frame.origin.x = cell.titleLabelMutual.frame.origin.x
+                        cell.advertiserNameLabel.frame.origin.y = cell.titleLabelMutual.frame.height + 5
                     }
                 }
             }

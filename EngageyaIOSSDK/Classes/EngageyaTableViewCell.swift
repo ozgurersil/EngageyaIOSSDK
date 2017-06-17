@@ -16,13 +16,13 @@ class EngageyaTableViewCell: UITableViewCell {
         descLabel.textAlignment = .left
         descLabel.lineBreakMode = .byWordWrapping
         descLabel.numberOfLines = 3
-        descLabel.adjustsFontSizeToFitWidth = true
+        //descLabel.adjustsFontSizeToFitWidth = true
         return descLabel
     }()
     
     var advertiserNameLabel:UILabel = {
         let padding = Int(OptionalParams.imagePaddingLeft) + Int(OptionalParams.imageWidth) + 10
-        let descLabel = UILabel(frame: CGRect(x:Int(OptionalParams.imageWidth + 10) , y: 0 , width: Int(OptionalParams.cellWidth) - Int(padding), height: 12))
+        let descLabel = UILabel(frame: CGRect(x:padding , y: 0 , width: Int(OptionalParams.cellWidth) - Int(padding), height: 12))
         descLabel.textAlignment = .left
         descLabel.textColor = UIColor(hex: 0xcccccc)
         descLabel.font = UIFont.systemFont(ofSize: 10)
