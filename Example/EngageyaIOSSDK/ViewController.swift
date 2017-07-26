@@ -11,8 +11,7 @@ import SafariServices
 
 class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate {
     
-    let engageya:EngageyaIOSSDK = EngageyaIOSSDK()
-    
+    var engageya:EngageyaIOSSDK!
     var adWebview:UIViewController?
     
     
@@ -22,30 +21,35 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
         let holder:UIView = UIView(frame: CGRect(x: 0, y: 20, width: self.view.frame.width, height: self.view.frame.height))
         self.view.addSubview(holder)
         
-        let appId:[String:Any] = [
-            "pub_id" : "xxx",
-            "web_id" : "xxx",
-            "wid_id" : "xxx",
-            "url" : "http://xxx/xxx/",
+        
+        let url = "http://www.ntv.com.tr/galeri/teknoloji/cocuklar-icin-sadece-gunduz-calisan-akilli-telefon-uretildi,kuoCYkk5pUeHsmlL4TddFw"
+        
+        let appSettings:[String:Any] = [
             "titlePaddingLeft":5,
-            "imageWidth": 100,
-            "imageHeight": 75,
-            "tileHeight":80,
-            "fontFamily":UIFont.systemFont(ofSize: 12),
-            "fontSize": 15
+            "titlePaddingTop":5,
+            "imagePaddingLeft":2,
+            "imageWidth": 75,
+            "imageHeight": 50,
+            "tileHeight":100,
+            "fontFamily":UIFont.systemFont(ofSize: 13),
+            "fontSize": 12,
+            "widgetHeight" : 210,
+            "tileRowCount" : 2
         ]
         
-        self.engageya.createListView(idCollection: appId) { (widget:UIView) in
+        self.engageya = EngageyaIOSSDK(pubid:"158041",webid:"116302",widid:"89852")
+      
+        
+        /*self.engageya.sharedCreatives().createCollectionView(url: url,options: appSettings) { (widget:UIView) in
             holder.addSubview(widget)
-            self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
+            self.engageya.getEventManager().listenTo(eventName: "tapped", action: self.clickAction)
+        }*/
+        
+        self.engageya.sharedCreatives().createCollectionView(url: url,options: appSettings) { (widget:UIView) in
+            holder.addSubview(widget)
+            self.engageya.getEventManager().listenTo(eventName: "tapped", action: self.clickAction)
         }
         
-        /*
-         self.engageya.createCollectionView(idCollection: appId) { (widget:UIView) in
-         holder.addSubview(widget)
-         self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
-        }
-         */
       
     }
     
@@ -75,7 +79,7 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
                 }
              }
             else{
-                print("this is not an ad \(box.clickUrl)")
+                print("this is not an ad \(box.url!)")
             }
         }
     }

@@ -22,6 +22,9 @@
 		89C3C604C979144D4A6DA91708F3ED73 /* EngageyaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6D8E1CEB91E401A15BA806DAB13B /* EngageyaCollectionViewCell.swift */; };
 		93696230C2E435076388F7109ACA913F /* EngageyaIOSSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5836BA244D24B7F57E35B9FCA5FD1F9 /* EngageyaIOSSDK.swift */; };
 		96CF71CAA1E675F0D9E25D6613B92053 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		9B8B47E71F287A880045CE4C /* OptionalsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B47E61F287A880045CE4C /* OptionalsCheck.swift */; };
+		9B8B47E91F28879D0045CE4C /* EngageyaTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B47E81F28879D0045CE4C /* EngageyaTypes.swift */; };
+		9BCC11701F276E7D009404F7 /* EngageyaCreativesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCC116F1F276E7D009404F7 /* EngageyaCreativesView.swift */; };
 		DC05654707CDD805C53FFCF3B5AE43D0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00195C030E1DDEA0AC114A45CF47E6 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
@@ -48,17 +51,20 @@
 		601F6AA34F72E3845389648C10C604A7 /* EventManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6F00DD6F9A66CC8E0319162313B30F77 /* EngageyaIOSSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EngageyaIOSSDK-umbrella.h"; sourceTree = "<group>"; };
-		706FDCA96565143E087D558EC158DDC8 /* Pods-EngageyaIOSSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EngageyaIOSSDK_Example.modulemap"; sourceTree = "<group>"; };
-		7CB88977140E55B931FB2D90BE9DF6EB /* Pods-EngageyaIOSSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-EngageyaIOSSDK_Tests.modulemap"; sourceTree = "<group>"; };
-		83B50BE410C90DC0AE8358F39BD6280C /* Pods_EngageyaIOSSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EngageyaIOSSDK_Example.framework; path = "Pods-EngageyaIOSSDK_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		706FDCA96565143E087D558EC158DDC8 /* Pods-EngageyaIOSSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EngageyaIOSSDK_Example.modulemap"; sourceTree = "<group>"; };
+		7CB88977140E55B931FB2D90BE9DF6EB /* Pods-EngageyaIOSSDK_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EngageyaIOSSDK_Tests.modulemap"; sourceTree = "<group>"; };
+		83B50BE410C90DC0AE8358F39BD6280C /* Pods_EngageyaIOSSDK_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngageyaIOSSDK_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8822DAC54A5A2BBC176341A6DBFE7F75 /* Pods-EngageyaIOSSDK_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EngageyaIOSSDK_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		906103103C224D85D05F46E190122C4C /* Pods-EngageyaIOSSDK_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EngageyaIOSSDK_Example-dummy.m"; sourceTree = "<group>"; };
 		92C007DC47CBF9E164F63E0321924C68 /* Pods-EngageyaIOSSDK_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EngageyaIOSSDK_Example.release.xcconfig"; sourceTree = "<group>"; };
-		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		950FD9AFD3F1F7B446D3B41AFC5FC204 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		980433BC9B2B0AA0AA67F13B7067618F /* Pods-EngageyaIOSSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EngageyaIOSSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EngageyaIOSSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		99DC4D2FE216C9F895130706C87F9611 /* Pods-EngageyaIOSSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Example-resources.sh"; sourceTree = "<group>"; };
+		9B8B47E61F287A880045CE4C /* OptionalsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalsCheck.swift; sourceTree = "<group>"; };
+		9B8B47E81F28879D0045CE4C /* EngageyaTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaTypes.swift; sourceTree = "<group>"; };
+		9BCC116F1F276E7D009404F7 /* EngageyaCreativesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaCreativesView.swift; sourceTree = "<group>"; };
 		9D7F89BC3008D020766B5CE09D13878F /* Pods-EngageyaIOSSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EngageyaIOSSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		A3510D9E72A5CA6421DDC7878372AE42 /* JSONRequestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONRequestHandler.swift; sourceTree = "<group>"; };
 		B21FF78E5008D00916347C94D46B9B5D /* Pods-EngageyaIOSSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EngageyaIOSSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
@@ -67,12 +73,12 @@
 		C62668FE05E183E820449D673E9D68F2 /* Pods-EngageyaIOSSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EngageyaIOSSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		CBCF6D8E1CEB91E401A15BA806DAB13B /* EngageyaCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1AF8D6FA667AE0384A98302F014079D /* Pods-EngageyaIOSSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Tests-resources.sh"; sourceTree = "<group>"; };
-		D367E91172DD425A2091214B66FDBD9E /* EngageyaIOSSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = EngageyaIOSSDK.modulemap; sourceTree = "<group>"; };
-		D934E02B5B71CE7CBF250297C1E06281 /* EngageyaIOSSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = EngageyaIOSSDK.framework; path = EngageyaIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D367E91172DD425A2091214B66FDBD9E /* EngageyaIOSSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EngageyaIOSSDK.modulemap; sourceTree = "<group>"; };
+		D934E02B5B71CE7CBF250297C1E06281 /* EngageyaIOSSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EngageyaIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EngageyaIOSSDK-dummy.m"; sourceTree = "<group>"; };
 		F32DC75580C56329FF34AA908F543FC0 /* Pods-EngageyaIOSSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EngageyaIOSSDK_Tests-dummy.m"; sourceTree = "<group>"; };
 		F5836BA244D24B7F57E35B9FCA5FD1F9 /* EngageyaIOSSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaIOSSDK.swift; sourceTree = "<group>"; };
-		FDCC219190906786A6F7E422C17A72E7 /* Pods_EngageyaIOSSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_EngageyaIOSSDK_Tests.framework; path = "Pods-EngageyaIOSSDK_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FDCC219190906786A6F7E422C17A72E7 /* Pods_EngageyaIOSSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngageyaIOSSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDAC786DD441E37B50B62761D6B7D03 /* EngageyaIOSSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EngageyaIOSSDK-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -156,8 +162,10 @@
 				4D00195C030E1DDEA0AC114A45CF47E6 /* Extensions.swift */,
 				A3510D9E72A5CA6421DDC7878372AE42 /* JSONRequestHandler.swift */,
 				27E33B47E92C06B6F36E8F3D9FF515F6 /* OptionalParams.swift */,
+				9BCC116F1F276E7D009404F7 /* EngageyaCreativesView.swift */,
+				9B8B47E61F287A880045CE4C /* OptionalsCheck.swift */,
+				9B8B47E81F28879D0045CE4C /* EngageyaTypes.swift */,
 			);
-			name = Classes;
 			path = Classes;
 			sourceTree = "<group>";
 		};
@@ -187,7 +195,6 @@
 			children = (
 				0D18A3F5641EB15FD49D00A43F8501F8 /* Classes */,
 			);
-			name = EngageyaIOSSDK;
 			path = EngageyaIOSSDK;
 			sourceTree = "<group>";
 		};
@@ -365,13 +372,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B8B47E91F28879D0045CE4C /* EngageyaTypes.swift in Sources */,
 				89C3C604C979144D4A6DA91708F3ED73 /* EngageyaCollectionViewCell.swift in Sources */,
+				9BCC11701F276E7D009404F7 /* EngageyaCreativesView.swift in Sources */,
 				4C411383F0A64EF737E8816B1461E0E7 /* EngageyaIOSSDK-dummy.m in Sources */,
 				93696230C2E435076388F7109ACA913F /* EngageyaIOSSDK.swift in Sources */,
 				153853F057148FBD9751198921BDF157 /* EngageyaTableViewCell.swift in Sources */,
 				7A9FA1E3ECC488749FA439EC18AC59C8 /* EventManager.swift in Sources */,
 				DC05654707CDD805C53FFCF3B5AE43D0 /* Extensions.swift in Sources */,
 				8713DA5E2F8CA46AF6404D60991B6386 /* JSONRequestHandler.swift in Sources */,
+				9B8B47E71F287A880045CE4C /* OptionalsCheck.swift in Sources */,
 				7E32F54E4FB582DA19B564FFC0541D4D /* OptionalParams.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

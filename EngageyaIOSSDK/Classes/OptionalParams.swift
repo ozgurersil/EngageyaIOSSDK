@@ -22,7 +22,7 @@ internal class OptionalParams: NSObject {
     
     static var titlePaddingLeft = 0.0
     
-    static var brandPaddingLeft = 0.0
+    static var titlePaddingTop = 0.0
     
     static var tilePadding = 10.0
     
@@ -36,6 +36,7 @@ internal class OptionalParams: NSObject {
     
     static var tileHeight = 100.0
     
+    static var maxLines = 2
+    
     static var direction:Align = .vertical
-  
 }
