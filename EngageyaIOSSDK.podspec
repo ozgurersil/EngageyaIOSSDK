@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'EngageyaIOSSDK'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'EngageyaIOSSDK is a recommandatition and monetization tool for publishers'
 
 # This description is used to generate tags and improve search results.
