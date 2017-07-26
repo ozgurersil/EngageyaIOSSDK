@@ -15,14 +15,14 @@ class JSONRequestHandler: NSObject {
        var webid = ""
        var widid = ""
        var pageUrl = ""
-       if let pud_id:String = EngageyaIOSSDK.pubid as? String {
+       if let pud_id:String = EngageyaIOSSDK.pubid as String? {
             // print("pub_id not defined")
             pubid = pud_id
        }
-       if let web_id:String = EngageyaIOSSDK.webid as? String {
+       if let web_id:String = EngageyaIOSSDK.webid as String? {
             webid = web_id
        }
-       if let wid_id:String = EngageyaIOSSDK.widid as? String  {
+       if let wid_id:String = EngageyaIOSSDK.widid as String?  {
             //print("wid_id not defined")
             widid = wid_id
        }
@@ -49,7 +49,7 @@ class JSONRequestHandler: NSObject {
                     let parsedData = try JSONSerialization.jsonObject(with: data!, options: []) as! [String:Any]
                     var engBoxes:[EngageyaBox] = []
                     if let recs = parsedData["recs"] as? NSArray{
-                        for(index,value) in recs.enumerated(){
+                        for(_,value) in recs.enumerated(){
                             var thumbnail_path:String?
                             if let thumbnailPath:String = (value as AnyObject)["thumbnail_path"] as? String {
                                 thumbnail_path = String(htmlEncodedString:thumbnailPath)
@@ -83,7 +83,7 @@ class JSONRequestHandler: NSObject {
                         }
                     }
                 } catch let error as NSError {
-                    //print(error)
+                    print(error)
                     compliation(false, EngageyaWidget(boxes: [], widgetTitle: "error"))
                 }
             }

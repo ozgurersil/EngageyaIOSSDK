@@ -82,7 +82,7 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
                 OptionalsCheck.checkOptionals(idCollection: definedOptions, type: .collectionView)
             }
             
-            // set data array
+            // set data arrayˆ
             self.items = widget.boxes!
             
             let holderView:UIView = UIView(frame: UIScreen.main.bounds)
@@ -169,9 +169,9 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
     // Detect orientation changes
     
     func rotated() {
-        guard let flowLayout = cView?.collectionViewLayout as? UICollectionViewFlowLayout else {
+        /*guard let flowLayout = cView?.collectionViewLayout as? UICollectionViewFlowLayout else {
             return
-        }
+        }*/
         /*if UIDevice.current.orientation.isLandscape {
          print("Landscape")
          var count = UIScreen.main.bounds.width / CGFloat(EngageyaCollectionViewCell.imageWidth)
@@ -196,11 +196,11 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
     }
     
     public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let tile:EngageyaBox = self.items[indexPath.row] as EngageyaBox{
+            let tile = self.items[indexPath.row]
              let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "goCell", for: indexPath) as! EngageyaCollectionViewCell
                 cell.tag = (indexPath as NSIndexPath).row
             if let title = tile.title{
-                cell.titleLabelMutual?.text = String(htmlEncodedString:tile.title)
+                cell.titleLabelMutual?.text = String(htmlEncodedString:title)
             }
             cell.titleLabelMutual?.frame.size.width = CGFloat(cell.frame.width) - 10
             cell.titleLabelMutual?.sizeToFit()
@@ -225,10 +225,8 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
                     }
                 }
             return cell
-        }
-        else{
-            return UICollectionViewCell()
-        }
+        
+        
     }
     
     public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -257,7 +255,7 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
     
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let box = self.items[indexPath.row] as? EngageyaBox {
+            let box = self.items[indexPath.row]
             let cell = self.tableView?.dequeueReusableCell(withIdentifier: "box", for: indexPath) as! EngageyaTableViewCell
             cell.tag = (indexPath as NSIndexPath).row
             cell.titleLabelMutual.text = String(htmlEncodedString: box.title)
@@ -280,7 +278,7 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
                 }
             }
             return cell
-        }
+        
     }
 
 }
