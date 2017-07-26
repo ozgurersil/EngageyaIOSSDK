@@ -14,8 +14,7 @@ class JSONRequestHandler: NSObject {
        var pubid = ""
        var webid = ""
        var widid = ""
-       var pageUrl = ""
-       if let pud_id:String = EngageyaIOSSDK.pubid as String? {
+      if let pud_id:String = EngageyaIOSSDK.pubid as String? {
             // print("pub_id not defined")
             pubid = pud_id
        }
@@ -27,12 +26,8 @@ class JSONRequestHandler: NSObject {
             widid = wid_id
        }
         
-       if let page_Url:String = url as? String {
-            //print("pageUrl not defined")
-            pageUrl = page_Url
-       }
-       let url = ("\(base_path)pubid=\(pubid)&webid=\(webid)&wid=\(widid)&url=\(pageUrl)")
-       return url
+       let urlSample = ("\(base_path)pubid=\(pubid)&webid=\(webid)&wid=\(widid)&url=\(url)")
+       return urlSample
     }
     
     
