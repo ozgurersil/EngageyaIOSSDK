@@ -202,6 +202,7 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
             if let title = tile.title{
                 cell.titleLabelMutual?.text = String(htmlEncodedString:tile.title)
             }
+            cell.titleLabelMutual?.frame.size.width = CGFloat(cell.frame.width) - 10
             cell.titleLabelMutual?.sizeToFit()
             cell.titleLabelMutual?.frame.origin.y = CGFloat(OptionalParams.imageHeight) + CGFloat(OptionalParams.titlePaddingTop)
             
@@ -259,6 +260,15 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
         if let box = self.items[indexPath.row] as? EngageyaBox {
             let cell = self.tableView?.dequeueReusableCell(withIdentifier: "box", for: indexPath) as! EngageyaTableViewCell
             cell.tag = (indexPath as NSIndexPath).row
+            cell.titleLabelMutual.text = String(htmlEncodedString: box.title)
+            if let displayName = box.displayName {
+                cell.advertiserNameLabel.text = String(htmlEncodedString:displayName)
+            }
+            let padding = Int(OptionalParams.imagePaddingLeft) + Int(OptionalParams.imageWidth) + Int(OptionalParams.titlePaddingLeft)
+            cell.titleLabelMutual.frame.size.width = CGFloat(OptionalParams.cellWidth) - CGFloat(padding)
+            cell.titleLabelMutual.sizeToFit()
+            cell.advertiserNameLabel.frame.origin.x = cell.titleLabelMutual.frame.origin.x
+            cell.advertiserNameLabel.frame.origin.y = cell.titleLabelMutual.frame.height + cell.titleLabelMutual.frame.origin.y + 3
             let thumbnailURL =  "https:\(box.thumbnail_path!)"
             getDataFromUrl(thumbnailURL) { data in
                 DispatchQueue.main.async {
@@ -266,13 +276,6 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
                         let image = UIImage(data: data!)
                         self.imageCache[String(box.thumbnail_path)] = image
                         cell.homeImageView.image = image
-                        cell.titleLabelMutual.text = String(htmlEncodedString: box.title)
-                        if let displayName = box.displayName {
-                            cell.advertiserNameLabel.text = String(htmlEncodedString:displayName)
-                        }
-                        cell.titleLabelMutual.sizeToFit()
-                        cell.advertiserNameLabel.frame.origin.x = cell.titleLabelMutual.frame.origin.x
-                        cell.advertiserNameLabel.frame.origin.y = cell.titleLabelMutual.frame.height + cell.titleLabelMutual.frame.origin.y
                     }
                 }
             }

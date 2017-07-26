@@ -65,6 +65,10 @@ class EngageyaCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    override func prepareForReuse() {
+        self.titleLabelMutual?.text = nil
+        self.advertiserNameLabel?.text = nil
+    }
 
     
 }

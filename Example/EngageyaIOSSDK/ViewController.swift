@@ -22,33 +22,37 @@ class ViewController: UIViewController, UITableViewDelegate , UIWebViewDelegate 
         self.view.addSubview(holder)
         
         
-        let url = "http://www.ntv.com.tr/galeri/teknoloji/cocuklar-icin-sadece-gunduz-calisan-akilli-telefon-uretildi,kuoCYkk5pUeHsmlL4TddFw"
+        let url = "http://www.xxx.com/xxx-xxxxx-xxxxx-xxxx-xxx-xxxx"
         
         let appSettings:[String:Any] = [
             "titlePaddingLeft":5,
-            "titlePaddingTop":5,
+            "titlePaddingTop":0,
             "imagePaddingLeft":2,
             "imageWidth": 75,
             "imageHeight": 50,
-            "tileHeight":100,
+            "tileHeight":120,
             "fontFamily":UIFont.systemFont(ofSize: 13),
-            "fontSize": 12,
-            "widgetHeight" : 210,
-            "tileRowCount" : 2
+            "fontSize": 13,
+            "widgetHeight" : 500,
+            "maxLines":3,
+            "fontColor": UIColor.black
         ]
         
-        self.engageya = EngageyaIOSSDK(pubid:"158041",webid:"116302",widid:"89852")
-      
-        
-        /*self.engageya.sharedCreatives().createCollectionView(url: url,options: appSettings) { (widget:UIView) in
-            holder.addSubview(widget)
-            self.engageya.getEventManager().listenTo(eventName: "tapped", action: self.clickAction)
-        }*/
+        self.engageya = EngageyaIOSSDK(pubid:"xxx",webid:"xxx",widid:"xxx")
         
         self.engageya.sharedCreatives().createCollectionView(url: url,options: appSettings) { (widget:UIView) in
             holder.addSubview(widget)
             self.engageya.getEventManager().listenTo(eventName: "tapped", action: self.clickAction)
         }
+        
+       /* self.engageya.sharedCreatives().createListView(url: url,options: appSettings) { (widget:UIView) in
+            holder.addSubview(widget)
+            self.engageya.getEventManager().listenTo(eventName: "tapped", action: self.clickAction)
+        }*/
+ 
+        /*self.engageya.sharedCreatives().getWidgetData(url: url) { (widget:EngageyaWidget) in
+            print(widget.boxes)
+        }*/
         
       
     }

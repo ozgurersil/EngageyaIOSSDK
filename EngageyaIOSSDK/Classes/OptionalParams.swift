@@ -39,4 +39,6 @@ internal class OptionalParams: NSObject {
     static var maxLines = 2
     
     static var direction:Align = .vertical
+    
+    static var fontColor:UIColor = UIColor.black
 }

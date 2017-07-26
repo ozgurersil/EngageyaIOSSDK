@@ -78,5 +78,9 @@ class OptionalsCheck: NSObject {
                 }
             }
         }
+        
+        if let fontColor = idCollection["fontColor"] as? UIColor{
+            OptionalParams.fontColor = fontColor
+        }
     }
 }

@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		08069952B0EB9275FAADEF3D1F9A6B7A /* EngageyaIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */; };
 		0E367FDA82B245A8CFB5CBCA27D87838 /* Pods-EngageyaIOSSDK_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 906103103C224D85D05F46E190122C4C /* Pods-EngageyaIOSSDK_Example-dummy.m */; };
-		0E92BD1F906E792803C4714CC5C9A9A7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		153853F057148FBD9751198921BDF157 /* EngageyaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 548D5158ECE9E52024218FBEB253565A /* EngageyaTableViewCell.swift */; };
+		0E47130DA2CA8BA55E4626FB1E536615 /* OptionalsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B33ED27ECBF5300A471114C4FAFC00B /* OptionalsCheck.swift */; };
+		15F798CBCE206FC162F83E592EE128E5 /* EngageyaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1D1AC4733C4091E2C2268B713AD288BC /* EngageyaCollectionViewCell.swift */; };
+		2079B0BBC747AB156B8E4B375BD54BF5 /* OptionalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 219CA46583C33125F1A029B8FABC672F /* OptionalParams.swift */; };
+		2312F166F1C900B83E1C6D270FA43E32 /* EngageyaIOSSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F5A011CCC4F5073DCF6E07D5CC5850B /* EngageyaIOSSDK.swift */; };
+		27FA8C3585B26210304C5B2477617CD3 /* EngageyaTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5D44E4C0799FF1DFBF46EB923A47AAE /* EngageyaTypes.swift */; };
+		284FA870124CCF54E9C85BCE46CD79EB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E1517E661480E01188921EC9C32BCBB /* Extensions.swift */; };
 		3592303EDFE0273095C18DF8D2C3F6D6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		4C411383F0A64EF737E8816B1461E0E7 /* EngageyaIOSSDK-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */; };
 		4CB3C9DA1AF96A5E543910B13C20DA63 /* Pods-EngageyaIOSSDK_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F32DC75580C56329FF34AA908F543FC0 /* Pods-EngageyaIOSSDK_Tests-dummy.m */; };
 		5E22A3CABC9D1AF21444F07788C3AAC5 /* Pods-EngageyaIOSSDK_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6834D82A6C553EF54F7A448206DA32F5 /* EngageyaIOSSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F00DD6F9A66CC8E0319162313B30F77 /* EngageyaIOSSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		7A9FA1E3ECC488749FA439EC18AC59C8 /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 601F6AA34F72E3845389648C10C604A7 /* EventManager.swift */; };
-		7E32F54E4FB582DA19B564FFC0541D4D /* OptionalParams.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27E33B47E92C06B6F36E8F3D9FF515F6 /* OptionalParams.swift */; };
+		837F977C9EC17BE10F50C288D44B642C /* EngageyaIOSSDK-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 6F00DD6F9A66CC8E0319162313B30F77 /* EngageyaIOSSDK-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		8597C40D9AC0804EBA2674BA67BED91C /* Pods-EngageyaIOSSDK_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 26CA5B252E174E6772FE9E11900B0024 /* Pods-EngageyaIOSSDK_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8713DA5E2F8CA46AF6404D60991B6386 /* JSONRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3510D9E72A5CA6421DDC7878372AE42 /* JSONRequestHandler.swift */; };
-		89C3C604C979144D4A6DA91708F3ED73 /* EngageyaCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CBCF6D8E1CEB91E401A15BA806DAB13B /* EngageyaCollectionViewCell.swift */; };
-		93696230C2E435076388F7109ACA913F /* EngageyaIOSSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5836BA244D24B7F57E35B9FCA5FD1F9 /* EngageyaIOSSDK.swift */; };
 		96CF71CAA1E675F0D9E25D6613B92053 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		9B8B47E71F287A880045CE4C /* OptionalsCheck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B47E61F287A880045CE4C /* OptionalsCheck.swift */; };
-		9B8B47E91F28879D0045CE4C /* EngageyaTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B8B47E81F28879D0045CE4C /* EngageyaTypes.swift */; };
-		9BCC11701F276E7D009404F7 /* EngageyaCreativesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BCC116F1F276E7D009404F7 /* EngageyaCreativesView.swift */; };
-		DC05654707CDD805C53FFCF3B5AE43D0 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D00195C030E1DDEA0AC114A45CF47E6 /* Extensions.swift */; };
+		ADF9FDE8C875E3268FECEB92F5AEB616 /* EngageyaCreativesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBF01DB527E3DDE020BB75304EBDEBFD /* EngageyaCreativesView.swift */; };
+		B50C4AC76EBC7F3D503E915FD8D74BAD /* EventManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51EE7365BFCB4C60CC4F4171AE7B60DD /* EventManager.swift */; };
+		BA0569688761E49BC44BE96F0D602CE0 /* JSONRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F045FF5E0521FBAF87E5D97C4A41C8E /* JSONRequestHandler.swift */; };
+		E297023ADCDB1D2049501534201495F8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		E4E58BF0EF2379CC0E3BFFE7C25020BB /* EngageyaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 15321F5442180696B0AF8B451AA7B8E7 /* EngageyaTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,7 +33,7 @@
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = 2C0FDF9BB1DD7393A9C68AA031106BD0;
+			remoteGlobalIDString = FADBBEC993C3D1BFF35090AB47E870E0;
 			remoteInfo = EngageyaIOSSDK;
 		};
 /* End PBXContainerItemProxy section */
@@ -42,13 +42,17 @@
 		025B20DA03F8B1AE9DF092E21EDBA2D9 /* Pods-EngageyaIOSSDK_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EngageyaIOSSDK_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		0DB30076AF6A9B3C519D46FE73C77D18 /* Pods-EngageyaIOSSDK_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Example-frameworks.sh"; sourceTree = "<group>"; };
 		10ECD0E7CA63C9A4F771284E85FE5365 /* EngageyaIOSSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = EngageyaIOSSDK.xcconfig; sourceTree = "<group>"; };
+		15321F5442180696B0AF8B451AA7B8E7 /* EngageyaTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaTableViewCell.swift; sourceTree = "<group>"; };
+		1D1AC4733C4091E2C2268B713AD288BC /* EngageyaCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaCollectionViewCell.swift; sourceTree = "<group>"; };
+		1F045FF5E0521FBAF87E5D97C4A41C8E /* JSONRequestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONRequestHandler.swift; sourceTree = "<group>"; };
+		1F5A011CCC4F5073DCF6E07D5CC5850B /* EngageyaIOSSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaIOSSDK.swift; sourceTree = "<group>"; };
+		219CA46583C33125F1A029B8FABC672F /* OptionalParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalParams.swift; sourceTree = "<group>"; };
 		26CA5B252E174E6772FE9E11900B0024 /* Pods-EngageyaIOSSDK_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EngageyaIOSSDK_Tests-umbrella.h"; sourceTree = "<group>"; };
-		27E33B47E92C06B6F36E8F3D9FF515F6 /* OptionalParams.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalParams.swift; sourceTree = "<group>"; };
 		30F0AEC12E40E8991285D39DBFBFB214 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4D00195C030E1DDEA0AC114A45CF47E6 /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
-		548D5158ECE9E52024218FBEB253565A /* EngageyaTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaTableViewCell.swift; sourceTree = "<group>"; };
+		3E1517E661480E01188921EC9C32BCBB /* Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		51EE7365BFCB4C60CC4F4171AE7B60DD /* EventManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
 		577D014EC05A6D91066ADF2737ADB2D8 /* Pods-EngageyaIOSSDK_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		601F6AA34F72E3845389648C10C604A7 /* EventManager.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EventManager.swift; sourceTree = "<group>"; };
+		5B33ED27ECBF5300A471114C4FAFC00B /* OptionalsCheck.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = OptionalsCheck.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6F00DD6F9A66CC8E0319162313B30F77 /* EngageyaIOSSDK-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EngageyaIOSSDK-umbrella.h"; sourceTree = "<group>"; };
 		706FDCA96565143E087D558EC158DDC8 /* Pods-EngageyaIOSSDK_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-EngageyaIOSSDK_Example.modulemap"; sourceTree = "<group>"; };
@@ -62,40 +66,36 @@
 		980433BC9B2B0AA0AA67F13B7067618F /* Pods-EngageyaIOSSDK_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-EngageyaIOSSDK_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		9870C727C075EE088F17BE3DEB1DF28C /* Pods-EngageyaIOSSDK_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-EngageyaIOSSDK_Example-umbrella.h"; sourceTree = "<group>"; };
 		99DC4D2FE216C9F895130706C87F9611 /* Pods-EngageyaIOSSDK_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Example-resources.sh"; sourceTree = "<group>"; };
-		9B8B47E61F287A880045CE4C /* OptionalsCheck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OptionalsCheck.swift; sourceTree = "<group>"; };
-		9B8B47E81F28879D0045CE4C /* EngageyaTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaTypes.swift; sourceTree = "<group>"; };
-		9BCC116F1F276E7D009404F7 /* EngageyaCreativesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EngageyaCreativesView.swift; sourceTree = "<group>"; };
 		9D7F89BC3008D020766B5CE09D13878F /* Pods-EngageyaIOSSDK_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EngageyaIOSSDK_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
-		A3510D9E72A5CA6421DDC7878372AE42 /* JSONRequestHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = JSONRequestHandler.swift; sourceTree = "<group>"; };
 		B21FF78E5008D00916347C94D46B9B5D /* Pods-EngageyaIOSSDK_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EngageyaIOSSDK_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		B65B5850FAC40AF357EBB41AF29B33D3 /* Pods-EngageyaIOSSDK_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-EngageyaIOSSDK_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		C5C25B0D61377583F68ECB507D6E00E7 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C62668FE05E183E820449D673E9D68F2 /* Pods-EngageyaIOSSDK_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-EngageyaIOSSDK_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		CBCF6D8E1CEB91E401A15BA806DAB13B /* EngageyaCollectionViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaCollectionViewCell.swift; sourceTree = "<group>"; };
 		D1AF8D6FA667AE0384A98302F014079D /* Pods-EngageyaIOSSDK_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-EngageyaIOSSDK_Tests-resources.sh"; sourceTree = "<group>"; };
 		D367E91172DD425A2091214B66FDBD9E /* EngageyaIOSSDK.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = EngageyaIOSSDK.modulemap; sourceTree = "<group>"; };
 		D934E02B5B71CE7CBF250297C1E06281 /* EngageyaIOSSDK.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = EngageyaIOSSDK.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DBF01DB527E3DDE020BB75304EBDEBFD /* EngageyaCreativesView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaCreativesView.swift; sourceTree = "<group>"; };
 		E033A38AAFD1A937945CDCC643A0901A /* EngageyaIOSSDK-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "EngageyaIOSSDK-dummy.m"; sourceTree = "<group>"; };
 		F32DC75580C56329FF34AA908F543FC0 /* Pods-EngageyaIOSSDK_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-EngageyaIOSSDK_Tests-dummy.m"; sourceTree = "<group>"; };
-		F5836BA244D24B7F57E35B9FCA5FD1F9 /* EngageyaIOSSDK.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaIOSSDK.swift; sourceTree = "<group>"; };
+		F5D44E4C0799FF1DFBF46EB923A47AAE /* EngageyaTypes.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = EngageyaTypes.swift; sourceTree = "<group>"; };
 		FDCC219190906786A6F7E422C17A72E7 /* Pods_EngageyaIOSSDK_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngageyaIOSSDK_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FEDAC786DD441E37B50B62761D6B7D03 /* EngageyaIOSSDK-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "EngageyaIOSSDK-prefix.pch"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3D37503A83020E252660C5ABC2AA4308 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E297023ADCDB1D2049501534201495F8 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7F15DAEFE8ACFC14F175765233FBAA05 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				3592303EDFE0273095C18DF8D2C3F6D6 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		BE65C806835C79333B84C2DFCC6F8FE2 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0E92BD1F906E792803C4714CC5C9A9A7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,19 +152,27 @@
 			path = "Example/Pods/Target Support Files/EngageyaIOSSDK";
 			sourceTree = "<group>";
 		};
-		0D18A3F5641EB15FD49D00A43F8501F8 /* Classes */ = {
+		44E61B005A3C64789E1739D23417F8F9 /* EngageyaIOSSDK */ = {
 			isa = PBXGroup;
 			children = (
-				CBCF6D8E1CEB91E401A15BA806DAB13B /* EngageyaCollectionViewCell.swift */,
-				F5836BA244D24B7F57E35B9FCA5FD1F9 /* EngageyaIOSSDK.swift */,
-				548D5158ECE9E52024218FBEB253565A /* EngageyaTableViewCell.swift */,
-				601F6AA34F72E3845389648C10C604A7 /* EventManager.swift */,
-				4D00195C030E1DDEA0AC114A45CF47E6 /* Extensions.swift */,
-				A3510D9E72A5CA6421DDC7878372AE42 /* JSONRequestHandler.swift */,
-				27E33B47E92C06B6F36E8F3D9FF515F6 /* OptionalParams.swift */,
-				9BCC116F1F276E7D009404F7 /* EngageyaCreativesView.swift */,
-				9B8B47E61F287A880045CE4C /* OptionalsCheck.swift */,
-				9B8B47E81F28879D0045CE4C /* EngageyaTypes.swift */,
+				59CB8891630D4D20BDC7E080F7BC9DE0 /* Classes */,
+			);
+			path = EngageyaIOSSDK;
+			sourceTree = "<group>";
+		};
+		59CB8891630D4D20BDC7E080F7BC9DE0 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1D1AC4733C4091E2C2268B713AD288BC /* EngageyaCollectionViewCell.swift */,
+				15321F5442180696B0AF8B451AA7B8E7 /* EngageyaTableViewCell.swift */,
+				1F5A011CCC4F5073DCF6E07D5CC5850B /* EngageyaIOSSDK.swift */,
+				DBF01DB527E3DDE020BB75304EBDEBFD /* EngageyaCreativesView.swift */,
+				F5D44E4C0799FF1DFBF46EB923A47AAE /* EngageyaTypes.swift */,
+				51EE7365BFCB4C60CC4F4171AE7B60DD /* EventManager.swift */,
+				3E1517E661480E01188921EC9C32BCBB /* Extensions.swift */,
+				1F045FF5E0521FBAF87E5D97C4A41C8E /* JSONRequestHandler.swift */,
+				219CA46583C33125F1A029B8FABC672F /* OptionalParams.swift */,
+				5B33ED27ECBF5300A471114C4FAFC00B /* OptionalsCheck.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -172,7 +180,7 @@
 		5B5DFDA750654A85666B6808B9590043 /* EngageyaIOSSDK */ = {
 			isa = PBXGroup;
 			children = (
-				83C5D942384845A687C7DB72E245B166 /* EngageyaIOSSDK */,
+				44E61B005A3C64789E1739D23417F8F9 /* EngageyaIOSSDK */,
 				0848F5E79C322A0A506BA2A15B6D9A5C /* Support Files */,
 			);
 			name = EngageyaIOSSDK;
@@ -188,14 +196,6 @@
 				05A8D298DA70EF72E517896972F950D4 /* Products */,
 				E3249FB8DCF83E4A38FAD74CBE63A7D6 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		83C5D942384845A687C7DB72E245B166 /* EngageyaIOSSDK */ = {
-			isa = PBXGroup;
-			children = (
-				0D18A3F5641EB15FD49D00A43F8501F8 /* Classes */,
-			);
-			path = EngageyaIOSSDK;
 			sourceTree = "<group>";
 		};
 		9C1C0C50B381824814F5B1F2B142A0E0 /* Development Pods */ = {
@@ -268,11 +268,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B342D56B8C6B8AF5F11D4FF98CA6500B /* Headers */ = {
+		3028009E63A73951E2FC6429FAD4FEAE /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6834D82A6C553EF54F7A448206DA32F5 /* EngageyaIOSSDK-umbrella.h in Headers */,
+				837F977C9EC17BE10F50C288D44B642C /* EngageyaIOSSDK-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,23 +297,6 @@
 			productReference = 83B50BE410C90DC0AE8358F39BD6280C /* Pods_EngageyaIOSSDK_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		2C0FDF9BB1DD7393A9C68AA031106BD0 /* EngageyaIOSSDK */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 53C11EF9D87E16A83C45662BE8889F5D /* Build configuration list for PBXNativeTarget "EngageyaIOSSDK" */;
-			buildPhases = (
-				499F9E0BB8C838D9FEDD6D229447756F /* Sources */,
-				BE65C806835C79333B84C2DFCC6F8FE2 /* Frameworks */,
-				B342D56B8C6B8AF5F11D4FF98CA6500B /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = EngageyaIOSSDK;
-			productName = EngageyaIOSSDK;
-			productReference = D934E02B5B71CE7CBF250297C1E06281 /* EngageyaIOSSDK.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		5D5695D78F0B2330A4E1F647DDD41F79 /* Pods-EngageyaIOSSDK_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1239FDCF8CA3352CDB97137E4299A512 /* Build configuration list for PBXNativeTarget "Pods-EngageyaIOSSDK_Tests" */;
@@ -329,6 +312,23 @@
 			name = "Pods-EngageyaIOSSDK_Tests";
 			productName = "Pods-EngageyaIOSSDK_Tests";
 			productReference = FDCC219190906786A6F7E422C17A72E7 /* Pods_EngageyaIOSSDK_Tests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		FADBBEC993C3D1BFF35090AB47E870E0 /* EngageyaIOSSDK */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7B705D47FF0394DFBD9DC15FA99111C5 /* Build configuration list for PBXNativeTarget "EngageyaIOSSDK" */;
+			buildPhases = (
+				A66426B0E6268963CEBA2B98EE53E20A /* Sources */,
+				3D37503A83020E252660C5ABC2AA4308 /* Frameworks */,
+				3028009E63A73951E2FC6429FAD4FEAE /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngageyaIOSSDK;
+			productName = EngageyaIOSSDK;
+			productReference = D934E02B5B71CE7CBF250297C1E06281 /* EngageyaIOSSDK.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -352,7 +352,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				2C0FDF9BB1DD7393A9C68AA031106BD0 /* EngageyaIOSSDK */,
+				FADBBEC993C3D1BFF35090AB47E870E0 /* EngageyaIOSSDK */,
 				0C7179DCDE39F8DBBB63E438504EB9C6 /* Pods-EngageyaIOSSDK_Example */,
 				5D5695D78F0B2330A4E1F647DDD41F79 /* Pods-EngageyaIOSSDK_Tests */,
 			);
@@ -368,21 +368,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		499F9E0BB8C838D9FEDD6D229447756F /* Sources */ = {
+		A66426B0E6268963CEBA2B98EE53E20A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9B8B47E91F28879D0045CE4C /* EngageyaTypes.swift in Sources */,
-				89C3C604C979144D4A6DA91708F3ED73 /* EngageyaCollectionViewCell.swift in Sources */,
-				9BCC11701F276E7D009404F7 /* EngageyaCreativesView.swift in Sources */,
-				4C411383F0A64EF737E8816B1461E0E7 /* EngageyaIOSSDK-dummy.m in Sources */,
-				93696230C2E435076388F7109ACA913F /* EngageyaIOSSDK.swift in Sources */,
-				153853F057148FBD9751198921BDF157 /* EngageyaTableViewCell.swift in Sources */,
-				7A9FA1E3ECC488749FA439EC18AC59C8 /* EventManager.swift in Sources */,
-				DC05654707CDD805C53FFCF3B5AE43D0 /* Extensions.swift in Sources */,
-				8713DA5E2F8CA46AF6404D60991B6386 /* JSONRequestHandler.swift in Sources */,
-				9B8B47E71F287A880045CE4C /* OptionalsCheck.swift in Sources */,
-				7E32F54E4FB582DA19B564FFC0541D4D /* OptionalParams.swift in Sources */,
+				15F798CBCE206FC162F83E592EE128E5 /* EngageyaCollectionViewCell.swift in Sources */,
+				ADF9FDE8C875E3268FECEB92F5AEB616 /* EngageyaCreativesView.swift in Sources */,
+				08069952B0EB9275FAADEF3D1F9A6B7A /* EngageyaIOSSDK-dummy.m in Sources */,
+				2312F166F1C900B83E1C6D270FA43E32 /* EngageyaIOSSDK.swift in Sources */,
+				E4E58BF0EF2379CC0E3BFFE7C25020BB /* EngageyaTableViewCell.swift in Sources */,
+				27FA8C3585B26210304C5B2477617CD3 /* EngageyaTypes.swift in Sources */,
+				B50C4AC76EBC7F3D503E915FD8D74BAD /* EventManager.swift in Sources */,
+				284FA870124CCF54E9C85BCE46CD79EB /* Extensions.swift in Sources */,
+				BA0569688761E49BC44BE96F0D602CE0 /* JSONRequestHandler.swift in Sources */,
+				2079B0BBC747AB156B8E4B375BD54BF5 /* OptionalParams.swift in Sources */,
+				0E47130DA2CA8BA55E4626FB1E536615 /* OptionalsCheck.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -400,7 +400,7 @@
 		47982B469AC781C973D04B16FF790E13 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = EngageyaIOSSDK;
-			target = 2C0FDF9BB1DD7393A9C68AA031106BD0 /* EngageyaIOSSDK */;
+			target = FADBBEC993C3D1BFF35090AB47E870E0 /* EngageyaIOSSDK */;
 			targetProxy = A3CF37F2B15DECD73B5903B803EDFFC1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -489,6 +489,40 @@
 			};
 			name = Release;
 		};
+		2DCFE2D05D120E22ECC2A2CED7149472 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 10ECD0E7CA63C9A4F771284E85FE5365 /* EngageyaIOSSDK.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/EngageyaIOSSDK/EngageyaIOSSDK-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/EngageyaIOSSDK/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/EngageyaIOSSDK/EngageyaIOSSDK.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = EngageyaIOSSDK;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		3FE1CC952A60086978187BC59CC0B425 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 8822DAC54A5A2BBC176341A6DBFE7F75 /* Pods-EngageyaIOSSDK_Tests.release.xcconfig */;
@@ -563,41 +597,7 @@
 			};
 			name = Release;
 		};
-		47C18C7FFFC85CFABEE38049B4ED56AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 10ECD0E7CA63C9A4F771284E85FE5365 /* EngageyaIOSSDK.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/EngageyaIOSSDK/EngageyaIOSSDK-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/EngageyaIOSSDK/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/EngageyaIOSSDK/EngageyaIOSSDK.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = EngageyaIOSSDK;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
-				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		C70710B1B67224918659C0D6C5221F03 /* Debug */ = {
+		78FF9F5B0D75A288C6906EF0E2031200 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10ECD0E7CA63C9A4F771284E85FE5365 /* EngageyaIOSSDK.xcconfig */;
 			buildSettings = {
@@ -737,11 +737,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		53C11EF9D87E16A83C45662BE8889F5D /* Build configuration list for PBXNativeTarget "EngageyaIOSSDK" */ = {
+		7B705D47FF0394DFBD9DC15FA99111C5 /* Build configuration list for PBXNativeTarget "EngageyaIOSSDK" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				C70710B1B67224918659C0D6C5221F03 /* Debug */,
-				47C18C7FFFC85CFABEE38049B4ED56AD /* Release */,
+				78FF9F5B0D75A288C6906EF0E2031200 /* Debug */,
+				2DCFE2D05D120E22ECC2A2CED7149472 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

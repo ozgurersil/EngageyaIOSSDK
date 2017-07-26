@@ -13,10 +13,11 @@ class EngageyaTableViewCell: UITableViewCell {
     //// title
     var titleLabelMutual:UILabel = {
         let padding = Int(OptionalParams.imagePaddingLeft) + Int(OptionalParams.imageWidth) + Int(OptionalParams.titlePaddingLeft)
-        let descLabel = UILabel(frame: CGRect(x:Int(padding), y: Int(OptionalParams.titlePaddingTop) , width: Int(OptionalParams.cellWidth) - Int(padding) , height: 70))
+        let descLabel = UILabel(frame: CGRect(x:Int(padding), y: Int(OptionalParams.titlePaddingTop) , width: Int(OptionalParams.cellWidth) - Int(padding) , height: 50))
         descLabel.textAlignment = .left
         descLabel.lineBreakMode = .byTruncatingTail
         descLabel.numberOfLines = OptionalParams.maxLines
+        descLabel.textColor = OptionalParams.fontColor;
         return descLabel
     }()
     
@@ -67,6 +68,16 @@ class EngageyaTableViewCell: UITableViewCell {
         holderView.addSubview(self.homeImageView)
         holderView.addSubview(self.advertiserNameLabel)
         self.addSubview(holderView)
+    }
+    
+    override func prepareForReuse() {
+        self.titleLabelMutual.text = nil
+        self.advertiserNameLabel.text = nil
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        self.contentView.layoutIfNeeded() //This is the solution for :changed only after I tap the each cell
     }
     
     required init?(coder aDecoder: NSCoder) {
