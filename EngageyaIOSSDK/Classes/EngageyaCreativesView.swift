@@ -169,23 +169,7 @@ public class EngageyaCreativesView: NSObject, UITableViewDelegate , UITableViewD
     // Detect orientation changes
     
     func rotated() {
-        /*guard let flowLayout = cView?.collectionViewLayout as? UICollectionViewFlowLayout else {
-            return
-        }*/
-        /*if UIDevice.current.orientation.isLandscape {
-         print("Landscape")
-         var count = UIScreen.main.bounds.width / CGFloat(EngageyaCollectionViewCell.imageWidth)
-         flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width / count) - 12, height: 140)
-         self.cView?.frame = CGRect(x: 0, y: 40, width: UIScreen.main.bounds.width, height: 300)
-         self.cView?.setNeedsLayout()
-         
-         } else {
-         print("Portrait")
-         flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width / 2) - 12, height: 140)
-         self.cView?.frame = CGRect(x:0,y:40,width:UIScreen.main.bounds.width,height:400)
-         self.cView?.setNeedsLayout()
-         }
-         flowLayout.invalidateLayout()*/
+       
     }
     
     
