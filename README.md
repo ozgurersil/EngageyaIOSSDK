@@ -31,27 +31,31 @@ After pod install, simply add EngageyaIOSSDK with:
        import EngageyaIOSSDK
 ```
 
-Define connection with EngageyaIOSSDK and set your dictionary keys with the desired values
+Define connection with EngageyaIOSSDK with id's and set your dictionary keys with the desired values
 
 ```ruby
-        let engageya:EngageyaIOSSDK = EngageyaIOSSDK() 
+         self.engageya = EngageyaIOSSDK(pubid:"xxx",webid:"xxx",widid:"xxx")
 
-        let appId:[String:Any] = [
-            "pub_id" : "xxx", (required)
-            "web_id" : "xxx", (required)
-            "wid_id" : "xxx", (required)
-            "url" : "http://www.xxx.com/spor/futbol/haber/938402-ultraslandan-tffye-cikarma", (required)
-            "imageWidth": 70, (optional)
-            "imageHeight": 70, (optional)
-            "fontSize": 12, (optional)
-            "tilePadding": 5 (optional)
-        ]
+         
+         let appSettings:[String:Any] = [
+                    "titlePaddingLeft":5,
+                    "titlePaddingTop":0,
+                    "imagePaddingLeft":2,
+                    "imageWidth": 75,
+                    "imageHeight": 50,
+                    "tileHeight":120,
+                    "fontFamily":UIFont.systemFont(ofSize: 13),
+                    "fontSize": 13,
+                    "widgetHeight" : 500,
+                    "maxLines":3,
+                    "fontColor": UIColor.black
+                ]
 ```
 
 Ready for getting widget data with method named `getWidgetData`
 
 ```ruby
-         engageya.getWidgetData(idCollection: appId) { (widget:EngageyaWidget) in
+         engageya.sharedCreatives().getWidgetData(idCollection: appId) { (widget:EngageyaWidget) in
                 print("widgetTitle : \(widget.widgetTitle!)") // title of the widget
                 print("recs: \(widget.boxes!)") // Array of widget elements 
          }
@@ -77,52 +81,104 @@ Structure of response `EngageyaWidget` & `EngageyaBox`
 TableView Usage 
 
 ```ruby 
-        self.engageya.createListView(idCollection: appId) { (widget:UIView) in
-            holder.addSubview(widget)
-        }
+       self.engageya.sharedCreatives().createListView(url: url,options: appSettings) { (widget:UIView) in
+            self.view.addSubview(widget)
+            self.engageya.getEventManager().listenTo(eventName: "tapped", action: self.clickAction)
+       }
 ```
 
 Structure of response `widget` `(UIView)`
 
 ![UITableView](https://github.com/ozgurersil/EngageyaIOSSDK/blob/master/tableview.png?raw=true)
 
+
+CollectionView Usage 
+
+```ruby 
+       self.engageya.sharedCreatives().createCollectionView(url: url,options: appSettings) { (widget:UIView) in
+            self.view.addSubview(widget)
+            self.engageya.getEventManager().listenTo(eventName: "tapped", action: self.clickAction)
+       }
+```
+
+Structure of response `widget` `(UIView)`
+
+![UICollectionView](https://github.com/ozgurersil/EngageyaIOSSDK/blob/master/tableview.png?raw=true)
+
 ## Events
 
 ### Tap
 
 ```ruby
-       self.engageya.eventManager.listenTo(eventName: "tapped", action: self.clickAction)
+       self.engageya.getEventManager().listenTo(eventName: "tapped", action: self.clickAction)
 ```
 
 ```ruby 
       func clickAction(information:Any?){
-        if let box = information as? EngageyaBox {
-            if let displayName = box.displayName {
-                print("this is an ad \(displayName)")
-                let webView = UIWebView(frame: UIScreen.main.bounds)
-                if #available(iOS 9.0, *) {
-                    webView.allowsLinkPreview = true
-                } else {
-                    // Fallback on earlier versions
-                }
-                webView.delegate = self
-                view.addSubview(webView)
-                let url = "https:\(box.clickUrl!)"
-                let encoded_url = URL(string: url)!
-                webView.loadRequest(URLRequest(url: encoded_url))
-    
-            }
-            else{
-                print("this is not an ad \(box.clickUrl)")
-            }
-        }
-    }
+              if let box = information as? EngageyaBox {
+                  if let displayName = box.displayName {
+                      print("this is an ad \(displayName)")
+                      let url = "https:\(box.clickUrl!)"
+                      if #available(iOS 9.0, *) {
+                          let svc = SFSafariViewController(url: NSURL(string: url)! as URL)
+                          self.present(svc, animated: true, completion: nil)
+                      } else {
+                          adWebview = UIViewController()
+                          let webView:UIWebView = UIWebView(frame: UIScreen.main.bounds)
+                          webView.delegate = self
+                          webView.loadRequest(URLRequest(url: URL(string: url)!))
+                          let newBackButton = UIButton(frame: CGRect(x: 5, y: 5, width: 30 , height: 30))
+                          newBackButton.backgroundColor = UIColor.black
+                          newBackButton.setTitle("X", for: .normal)
+                          newBackButton.layer.cornerRadius = 2
+                          newBackButton.addTarget(self, action: #selector(self.backPressed(sender:)), for: .touchDown)
+                          adWebview?.view.addSubview(webView)
+                          adWebview?.view.addSubview(newBackButton)
+                          self.present(adWebview!, animated: true, completion: {
+                              print("moved")
+                          })
+                      }
+                   }
+                  else{
+                      print("this is not an ad \(box.url!)")
+                  }
+              }
+      }
+
 ```
+## Optional Params
 
-
-
-
-
+```ruby
+        static var imageWidth = 80.0
+        
+        static var imageHeight = 80.0
+        
+        static var imagePaddingLeft = 0.0
+        
+        static var imagePaddingTop = 0.0
+        
+        static var titlePaddingLeft = 0.0
+        
+        static var titlePaddingTop = 0.0
+        
+        static var tilePadding = 10.0
+        
+        static var tileRowCount = 2
+        
+        static var fontSize:Int?
+        
+        static var fontFamily:UIFont?
+        
+        static var widgetHeight:Int?
+        
+        static var tileHeight = 100.0
+        
+        static var maxLines = 2
+        
+        static var direction:Align = .vertical
+        
+        static var fontColor:UIColor = UIColor.black
+```
 
 ## Author
 
