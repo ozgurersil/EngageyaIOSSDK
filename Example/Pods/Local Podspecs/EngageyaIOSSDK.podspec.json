@@ -1,7 +1,7 @@
 {
   "name": "EngageyaIOSSDK",
-  "version": "0.1.0",
-  "summary": "A short description of EngageyaIOSSDK.",
+  "version": "0.1.1",
+  "summary": "EngageyaIOSSDK is a recommandatition and monetization tool for publishers",
   "description": "With the sdk, you can integrate Engageya recm. widget and monetization network",
   "homepage": "https://github.com/ozgurersil/EngageyaIOSSDK",
   "license": {
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ozgurersil/EngageyaIOSSDK.git",
-    "tag": "0.1.0"
+    "tag": "0.1.1"
   },
   "platforms": {
     "ios": "8.0"

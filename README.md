@@ -103,8 +103,6 @@ CollectionView Usage
 
 Structure of response `widget` `(UIView)`
 
-![UICollectionView](https://github.com/ozgurersil/EngageyaIOSSDK/blob/master/tableview.png?raw=true)
-
 ## Events
 
 ### Tap
