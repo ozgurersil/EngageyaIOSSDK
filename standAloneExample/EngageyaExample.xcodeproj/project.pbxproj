@@ -1,0 +1,423 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7F18D44D20469CDE00AFF16F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18D44C20469CDE00AFF16F /* AppDelegate.swift */; };
+		7F18D44F20469CDE00AFF16F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18D44E20469CDE00AFF16F /* ViewController.swift */; };
+		7F18D45220469CDE00AFF16F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F18D45020469CDE00AFF16F /* Main.storyboard */; };
+		7F18D45420469CDE00AFF16F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7F18D45320469CDE00AFF16F /* Assets.xcassets */; };
+		7F18D45720469CDE00AFF16F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7F18D45520469CDE00AFF16F /* LaunchScreen.storyboard */; };
+		7F18D45F20469D3500AFF16F /* EngageyaLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F18D45E20469D3500AFF16F /* EngageyaLoader.swift */; };
+		7F5EE61C2046DB290054283B /* EngageyaAdViewBoxCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5EE61B2046DB290054283B /* EngageyaAdViewBoxCell.swift */; };
+		7F5EE61E2046E8F30054283B /* EngageyaAdView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7F5EE61D2046E8F30054283B /* EngageyaAdView.swift */; };
+		7FC385ED2047F84A00A14D85 /* EngageyaAdViewBoxCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7FC385EB2047F56300A14D85 /* EngageyaAdViewBoxCell.xib */; };
+		9993D0BECA7AA22160E5E5D6 /* Pods_EngageyaExample.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A98246515C1F99ABBF96CC67 /* Pods_EngageyaExample.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		7F18D44920469CDE00AFF16F /* EngageyaExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EngageyaExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F18D44C20469CDE00AFF16F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		7F18D44E20469CDE00AFF16F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		7F18D45120469CDE00AFF16F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		7F18D45320469CDE00AFF16F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		7F18D45620469CDE00AFF16F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		7F18D45820469CDE00AFF16F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7F18D45E20469D3500AFF16F /* EngageyaLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngageyaLoader.swift; sourceTree = "<group>"; };
+		7F5EE61B2046DB290054283B /* EngageyaAdViewBoxCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngageyaAdViewBoxCell.swift; sourceTree = "<group>"; };
+		7F5EE61D2046E8F30054283B /* EngageyaAdView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EngageyaAdView.swift; sourceTree = "<group>"; };
+		7FC385EB2047F56300A14D85 /* EngageyaAdViewBoxCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EngageyaAdViewBoxCell.xib; sourceTree = "<group>"; };
+		A7FA0CB3EE075209F62FBC3D /* Pods-EngageyaExample.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngageyaExample.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EngageyaExample/Pods-EngageyaExample.debug.xcconfig"; sourceTree = "<group>"; };
+		A98246515C1F99ABBF96CC67 /* Pods_EngageyaExample.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_EngageyaExample.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFDF4DE7C17D79761EB4285C /* Pods-EngageyaExample.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EngageyaExample.release.xcconfig"; path = "Pods/Target Support Files/Pods-EngageyaExample/Pods-EngageyaExample.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7F18D44620469CDE00AFF16F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9993D0BECA7AA22160E5E5D6 /* Pods_EngageyaExample.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		109169F681FEC08401C3DEC1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A98246515C1F99ABBF96CC67 /* Pods_EngageyaExample.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F18D44020469CDE00AFF16F = {
+			isa = PBXGroup;
+			children = (
+				7F18D44B20469CDE00AFF16F /* EngageyaExample */,
+				7F18D44A20469CDE00AFF16F /* Products */,
+				BD9D9F1A2EB1E2414FDEA0CF /* Pods */,
+				109169F681FEC08401C3DEC1 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		7F18D44A20469CDE00AFF16F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7F18D44920469CDE00AFF16F /* EngageyaExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		7F18D44B20469CDE00AFF16F /* EngageyaExample */ = {
+			isa = PBXGroup;
+			children = (
+				7F5EE61D2046E8F30054283B /* EngageyaAdView.swift */,
+				7F18D45E20469D3500AFF16F /* EngageyaLoader.swift */,
+				7FC385EB2047F56300A14D85 /* EngageyaAdViewBoxCell.xib */,
+				7F5EE61B2046DB290054283B /* EngageyaAdViewBoxCell.swift */,
+				7F18D44C20469CDE00AFF16F /* AppDelegate.swift */,
+				7F18D44E20469CDE00AFF16F /* ViewController.swift */,
+				7F18D45020469CDE00AFF16F /* Main.storyboard */,
+				7F18D45320469CDE00AFF16F /* Assets.xcassets */,
+				7F18D45520469CDE00AFF16F /* LaunchScreen.storyboard */,
+				7F18D45820469CDE00AFF16F /* Info.plist */,
+			);
+			path = EngageyaExample;
+			sourceTree = "<group>";
+		};
+		BD9D9F1A2EB1E2414FDEA0CF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A7FA0CB3EE075209F62FBC3D /* Pods-EngageyaExample.debug.xcconfig */,
+				FFDF4DE7C17D79761EB4285C /* Pods-EngageyaExample.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7F18D44820469CDE00AFF16F /* EngageyaExample */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7F18D45B20469CDE00AFF16F /* Build configuration list for PBXNativeTarget "EngageyaExample" */;
+			buildPhases = (
+				8F3DFB6B45D905A48220D9FF /* [CP] Check Pods Manifest.lock */,
+				7F18D44520469CDE00AFF16F /* Sources */,
+				7F18D44620469CDE00AFF16F /* Frameworks */,
+				7F18D44720469CDE00AFF16F /* Resources */,
+				7844B622DD35ACB180513AA8 /* [CP] Embed Pods Frameworks */,
+				6AD276BD30622E8D141DC7DB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = EngageyaExample;
+			productName = EngageyaExample;
+			productReference = 7F18D44920469CDE00AFF16F /* EngageyaExample.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7F18D44120469CDE00AFF16F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0920;
+				LastUpgradeCheck = 0920;
+				TargetAttributes = {
+					7F18D44820469CDE00AFF16F = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 7F18D44420469CDE00AFF16F /* Build configuration list for PBXProject "EngageyaExample" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 7F18D44020469CDE00AFF16F;
+			productRefGroup = 7F18D44A20469CDE00AFF16F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7F18D44820469CDE00AFF16F /* EngageyaExample */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7F18D44720469CDE00AFF16F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7FC385ED2047F84A00A14D85 /* EngageyaAdViewBoxCell.xib in Resources */,
+				7F18D45720469CDE00AFF16F /* LaunchScreen.storyboard in Resources */,
+				7F18D45420469CDE00AFF16F /* Assets.xcassets in Resources */,
+				7F18D45220469CDE00AFF16F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6AD276BD30622E8D141DC7DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EngageyaExample/Pods-EngageyaExample-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7844B622DD35ACB180513AA8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-EngageyaExample/Pods-EngageyaExample-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Kingfisher/Kingfisher.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Kingfisher.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-EngageyaExample/Pods-EngageyaExample-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8F3DFB6B45D905A48220D9FF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-EngageyaExample-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7F18D44520469CDE00AFF16F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7F5EE61C2046DB290054283B /* EngageyaAdViewBoxCell.swift in Sources */,
+				7F18D45F20469D3500AFF16F /* EngageyaLoader.swift in Sources */,
+				7F18D44F20469CDE00AFF16F /* ViewController.swift in Sources */,
+				7F5EE61E2046E8F30054283B /* EngageyaAdView.swift in Sources */,
+				7F18D44D20469CDE00AFF16F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		7F18D45020469CDE00AFF16F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F18D45120469CDE00AFF16F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		7F18D45520469CDE00AFF16F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				7F18D45620469CDE00AFF16F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		7F18D45920469CDE00AFF16F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7F18D45A20469CDE00AFF16F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7F18D45C20469CDE00AFF16F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A7FA0CB3EE075209F62FBC3D /* Pods-EngageyaExample.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EngageyaExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AleyRobotics.EngageyaExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7F18D45D20469CDE00AFF16F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FFDF4DE7C17D79761EB4285C /* Pods-EngageyaExample.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = EngageyaExample/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = AleyRobotics.EngageyaExample;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7F18D44420469CDE00AFF16F /* Build configuration list for PBXProject "EngageyaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F18D45920469CDE00AFF16F /* Debug */,
+				7F18D45A20469CDE00AFF16F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7F18D45B20469CDE00AFF16F /* Build configuration list for PBXNativeTarget "EngageyaExample" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7F18D45C20469CDE00AFF16F /* Debug */,
+				7F18D45D20469CDE00AFF16F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 7F18D44120469CDE00AFF16F /* Project object */;
+}
